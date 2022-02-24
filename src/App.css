@@ -1,32 +1,168 @@
-.App {
-  text-align: center;
+.show-header {
+    background: white;
+    transition: 1s;
+}
+.hide-header {
+    background: transparent;
+    transition: 0.5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.active {
+    border-bottom: 0.1rem solid rgba(40, 44, 52, 0.8);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (max-width: 780px) {
+    .active {
+        border-bottom: unset;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link:after {
+    display:block;
+    content: '';
+    border-bottom: 0.1rem solid rgba(40, 44, 52, 0.8);  
+    transform: scaleX(0); 
+    transition: transform 250ms ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 780px) {
+    .nav-link:after {
+        border-bottom: 0.1rem solid white;  
+    }
 }
+
+.nav-link:hover:after {
+    transform: scaleX(1);
+}
+
+.nav-burger {
+    width: 2.7em;
+    height: 2.7em;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+}
+
+@media screen and (max-width: 780px) {
+    .nav-burger {
+        display: block;
+        position: fixed;
+        top: 2em;
+        right: 20vw;
+    }
+    .nav-burger:hover {
+        cursor: pointer
+    }
+    
+
+    .burger-bar,
+    .burger-bar:before,
+    .burger-bar:after {
+        display: block;
+        width: 2em;
+        height: 0.2em;
+        position: relative;
+        border-radius: 1em;
+        background: rgba(40, 44, 52, 0.8);
+        transition: all .5s ease-in-out;
+    }
+
+    .burger-bar:before,
+    .burger-bar:after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+    
+    .burger-bar:before {
+        transform: translateY(-0.5rem)
+    }
+    .burger-bar:after {
+        transform: translateY(0.5rem)
+    }
+}
+
+.show-nav.burger-bar {
+    width: 0;
+    background: transparent;
+}
+.show-nav.burger-bar:before {
+    transform: rotate(45deg);
+    background: white;
+}
+.show-nav.burger-bar:after {
+    transform: rotate(-45deg);
+    background: white;
+}
+
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 780px) {
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: -200vw;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        visibility: hidden;
+        transition: all .8s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .show-nav.nav-container {
+        right: 0;
+        visibility: visible;
+    }
+    .nav-link {
+        transform: translateY(200vh);
+    }
+    .show-nav.slide-1 {
+        transform: translateY(0);
+        transition: all 1s ease-in-out;
+    }
+    .show-nav.slide-2 {
+        transform: translateY(0);
+        transition: all 1.1s ease-in-out;
+    }
+    .show-nav.slide-3 {
+        transform: translateY(0);
+        transition: all 1.2s ease-in-out;
+    }
+    .show-nav.slide-4 {
+        transform: translateY(0);
+        transition: all 1.3s ease-in-out;
+    }
+    .show-nav.nav-burger {
+        right: 20vw;
+    }
+}
+
+
+.title:after {
+    display:block;
+    content: '';
+    border-bottom: 0.1rem solid rgba(40, 44, 52, 0.8);  
+    transform: scaleX(0.5); 
+}
+
+
+.input::placeholder {
+    font-size: 1.7em;
+    opacity: 0.5;
+}
+
 
 @keyframes App-logo-spin {
   from {
