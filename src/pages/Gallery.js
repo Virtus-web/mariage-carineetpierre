@@ -23,7 +23,7 @@ const CardPhoto = styled.img`
 
 function Gallery() {
 
-    const { data, error } = useData (`http://localhost:3001/photos`)
+    const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
     const photosData = data[0]?.locationData
 

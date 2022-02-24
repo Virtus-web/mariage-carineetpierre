@@ -2,7 +2,7 @@ import { useData } from '../utils/hooks/data'
 
 function GuestList() {
 
-    const { data, error } = useData (`http://localhost:3001/guestlist`)
+    const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/guestlist`)
 
     if (error) {
         return <span>Oups il y a eu un problème</span>
