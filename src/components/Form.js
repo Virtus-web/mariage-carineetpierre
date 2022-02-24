@@ -56,7 +56,7 @@ function Footer() {
     const [ newAnswer, setNewAnswer ] = useState("")
 
     const addToAnswer = () => {
-        Axios.post("http://localhost:3001/guestlist", {
+        Axios.post("https://mariage-carineetpierre.herokuapp.com/guestlist", {
             guestName: guestName,
             guestMail: guestMail,
             guestNumber: guestNumber,
@@ -66,13 +66,13 @@ function Footer() {
 
     const updateToAnswer = (id) => {
         setNewAnswer("Non")
-        Axios.put("http://localhost:3001/guestlist", {
+        Axios.put("https://mariage-carineetpierre.herokuapp.com/guestlist", {
             id: id,
             newAnswer: newAnswer
         })
     }
 
-    const { data, error } = useData (`http://localhost:3001/guestlist`)
+    const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/guestlist`)
 
     if (error) {
         return <span>Oups il y a eu un problème</span>
