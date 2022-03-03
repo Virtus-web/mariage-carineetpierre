@@ -1,10 +1,12 @@
-import Form2 from '../components/Form2'
+// import Form2 from '../components/Form2'
 
 function Information() {
 
     return (
 
-        <Form2 />
+        <div>Hello World !</div>
+
+        // <Form2 />
 
         // <form action="/items" method="post" encType="multipart/form-data">
         //     <input type="file" name="test"></input>
