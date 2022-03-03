@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useData } from '../utils/hooks/data'
+// import { useData } from '../utils/hooks/data'
 import Axios from 'axios'
 import styled from 'styled-components'
 
@@ -53,7 +53,7 @@ function Footer() {
     const [ guestMail, setGuestMail ] = useState("")
     const [ guestNumber, setGuestNumber ] = useState("")
     const [ guestAnswer, setGuestAnswer ] = useState("")
-    const [ newAnswer, setNewAnswer ] = useState("")
+    // const [ newAnswer, setNewAnswer ] = useState("")
 
     const addToAnswer = () => {
         Axios.post("https://mariage-carineetpierre.herokuapp.com/guestlist", {
@@ -64,33 +64,33 @@ function Footer() {
         })
     }
 
-    const updateToAnswer = (id) => {
-        setNewAnswer("Non")
-        Axios.put("https://mariage-carineetpierre.herokuapp.com/guestlist", {
-            id: id,
-            newAnswer: newAnswer
-        })
-    }
+    // const updateToAnswer = (id) => {
+    //     setNewAnswer("Non")
+    //     Axios.put("https://mariage-carineetpierre.herokuapp.com/guestlist", {
+    //         id: id,
+    //         newAnswer: newAnswer
+    //     })
+    // }
 
-    const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/guestlist`)
+    // const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/guestlist`)
 
-    if (error) {
-        return <span>Oups il y a eu un problème</span>
-    }
+    // if (error) {
+    //     return <span>Oups il y a eu un problème</span>
+    // }
 
     return (
         <FormContainer>
             <InputLabel>Réponse souhaitée avant le 30 Septembre</InputLabel>
             <FormBox action="#" method="post" name="form">
                 <Box>
-                    <Input disabled className="input" type="text" id="name" placeholder='NOM' required onChange={(e) => {setGuestName(e.target.value)}}/>
+                    <Input className="input" type="text" id="name" placeholder='NOM' required onChange={(e) => {setGuestName(e.target.value)}}/>
                     <div style={{marginTop: '2.5em', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                         <div>
-                            <Input disabled style={{width: '1.3em', height: '1.3em'}} type="radio" id="choice1" name="presence" value="oui" onChange={(e) => {setGuestAnswer(e.target.value)}} />
+                            <Input style={{width: '1.3em', height: '1.3em'}} type="radio" id="choice1" name="presence" value="oui" onChange={(e) => {setGuestAnswer(e.target.value)}} />
                             <InputLabel htmlFor="presence">Oui</InputLabel>
                         </div>
                         <div style={{marginLeft: '2em'}}>
-                            <Input disabled style={{width: '1.3em', height: '1.3em'}} type="radio" id="choice2" name="presence" value="non" onChange={(e) => {setGuestAnswer(e.target.value)}} />
+                            <Input style={{width: '1.3em', height: '1.3em'}} type="radio" id="choice2" name="presence" value="non" onChange={(e) => {setGuestAnswer(e.target.value)}} />
                             <InputLabel htmlFor="presence">Non</InputLabel>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ function Footer() {
                     <Input className="input" type="email" id="email" placeholder='EMAIL' required onChange={(e) => {setGuestMail(e.target.value)}} />
 
                     <InputLabel style={{marginTop: '1.5em', width: '25vw'}}>Nombre de personnes
-                        <select disabled style={{marginLeft: '1em', fontSize:'0.9em', width: '2.5em', height: '1.5em'}} id="number" onChange={(e) => {setGuestNumber(e.target.value)}}>
+                        <select style={{marginLeft: '1em', fontSize:'0.9em', width: '2.5em', height: '1.5em'}} id="number" onChange={(e) => {setGuestNumber(e.target.value)}}>
                             <option value={1} required>1</option>
                             <option value={2} required>2</option>
                             <option value={3} required>3</option>
@@ -109,10 +109,10 @@ function Footer() {
                     </InputLabel>
                 </Box>
             </FormBox>
-            <button style={{fontSize: '1.3em', margin: '0 0 2em 0', height: '3em', boxShadow: '0 0.5rem 1rem 0.01rem rgba(255, 255, 255, 0.3)'}} disabled onClick={addToAnswer}>Envoyer la réponse</button>
-            <button style={{fontSize: '1.3em', margin: '0 0 2em 0', height: '3em', boxShadow: '0 0.5rem 1rem 0.01rem rgba(255, 255, 255, 0.3)'}} disabled onClick={
+            <button style={{fontSize: '1.3em', margin: '0 0 2em 0', height: '3em', boxShadow: '0 0.5rem 1rem 0.01rem rgba(255, 255, 255, 0.3)'}} onClick={addToAnswer}>Envoyer la réponse</button>
+            {/* <button style={{fontSize: '1.3em', margin: '0 0 2em 0', height: '3em', boxShadow: '0 0.5rem 1rem 0.01rem rgba(255, 255, 255, 0.3)'}} onClick={
                 () => updateToAnswer(data._id)
-            }>Annulation</button>
+            }>Annulation</button> */}
         </FormContainer>
     )
 }
