@@ -56,7 +56,7 @@ function Footer() {
     // const [ newAnswer, setNewAnswer ] = useState("")
 
     const addToAnswer = () => {
-        Axios.post("https://mariage-carineetpierre.herokuapp.com/testlist", {
+        Axios.post("https://mariage-carineetpierre.herokuapp.com/exemple", {
             guestName: guestName,
             guestMail: guestMail,
             guestNumber: guestNumber,
