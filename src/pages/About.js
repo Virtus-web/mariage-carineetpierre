@@ -4,14 +4,12 @@ function Information() {
 
     return (
 
-        <div>Hello World !</div>
-
         // <Form2 />
 
-        // <form action="/items" method="post" encType="multipart/form-data">
-        //     <input type="file" name="test"></input>
-        //     <input type="submit"></input>
-        // </form>
+        <form action="/files" method="post" encType="multipart/form-data">
+            <input type="file" name="file"></input>
+            <input type="submit"></input>
+        </form>
         
     )
 }
