@@ -1,6 +1,6 @@
 // import styled from 'styled-components'
 import Photos from '../components/Photos'
-// import Trailers from '../components/Trailers'
+import Trailers from '../components/Trailers'
 
 
 // const GalleryBox = styled.div`
@@ -15,7 +15,7 @@ function Gallery() {
 
     return (
         <div>
-            {/* <Trailers /> */}
+            <Trailers />
             <Photos />
         </div>
     )
