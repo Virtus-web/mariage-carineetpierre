@@ -1,15 +1,19 @@
+@keyframes openLightbox {
+    from {opacity: 0;}
+    to {opacity : 1;}
+}
+
 .lightbox {
     position: fixed;
-    z-index: 100;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, .9);
-    /* overflow: auto; */
     display: none;
+    /* overflow: hidden; */
     animation: openLightbox .5s;
-    transition: opacity .3s;
 }
 
 .active.lightbox {
@@ -18,8 +22,17 @@
     align-items: center;
 }
 
-.closing.lightbox {
-    opacity: 0;
+
+.lightbox__container {
+    max-width: 100vw;
+    height: 100vh;
+    margin: 10vh auto 0 auto;
+    overflow: hidden;
+}
+@media screen and (max-width: 780px) {
+    .container-slider {
+        margin: 10vh 10vw;
+    }
 }
 
 button {
@@ -74,8 +87,14 @@ button:hover {
     margin-right: 5em;
 }
 
-.lightbox__media {
-    object-fit:contain;
-    height: 100%;
-    width: 100%;
+.photo-box {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: opacity ease-in-out 0.5s;
+}
+
+.anim.photo-box {
+    opacity: 1;
+    background-color: blue;
 }

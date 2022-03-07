@@ -1,5 +1,5 @@
 import { ThemeContext } from '../utils/context'
-import { Fragment, useContext } from 'react'
+import { Fragment, useContext, useState } from 'react'
 import { useData } from '../utils/hooks/data'
 import styled from 'styled-components'
 import Lightbox from './Lightbox'
@@ -20,8 +20,8 @@ const PhotoBox = styled.div`
 `
 
 const CardPhoto = styled.img`
-    height: 15em;
-    width: 15em;
+    height: 5em;
+    width: 5em;
     margin: 1em 1em;
     object-fit: cover;
     border-radius: 0.5em;
@@ -38,16 +38,10 @@ function Gallery() {
 
     const { activeModal } = useContext(ThemeContext)
 
-    // const modal = document.querySelector(".lightbox")
-    // const openLightbox = () => {
-    //     return !modal.classList.contains('active') ? modal.classList.add('active') : null
-    // }
-    
-    // const [ active, setActive ] = useState(false)
-    // const openLightbox = () => {
-    //     setActive(!active)
-    // }
-
+    const [ currentPhoto, setCurrentPhoto ] = useState(0)
+    const getCurrentIndex = (target) => {
+        setCurrentPhoto(target)
+    }
 
     const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
@@ -64,14 +58,17 @@ function Gallery() {
                     photosData ? (
                         photosData.map((element, index) => {
                             return (
-                                <div key={index} onClick={() => activeModal()}>
-                                    <CardPhoto className="gallery-photo" src={`../../photos/${element}`} alt="pics" />
+                                <div key={index} onClick={() => {
+                                    getCurrentIndex(index+1)
+                                    activeModal()
+                                }}>
+                                    <CardPhoto className="gallery-photo" src={`../../photos/photo_${element}.jpg`} alt="pics" />
                                 </div>
                             )
                         })) : (null)
                 }
             </PhotoBox>
-            <Lightbox />
+            <Lightbox currentPhoto={currentPhoto} />
         </Fragment>
     )
 }

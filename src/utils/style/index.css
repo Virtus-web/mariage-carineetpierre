@@ -4,7 +4,7 @@ body {
     padding-right: 20vw;
     /* background: linear-gradient(rgba(0, 0, 255, 0.1), rgba(255, 255, 0, 0.1)), url('./assets/Background.jpg'); */
     /* background: linear-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.5)), url('./assets/Background.jpg'); */
-    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url('../../assets/images/Background.jpg');
+    background: linear-gradient(rgba(147, 248, 231, 0.7), rgba(147, 248, 231, 1)), url('../../assets/images/Background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     

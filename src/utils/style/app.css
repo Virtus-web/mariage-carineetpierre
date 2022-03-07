@@ -1,5 +1,6 @@
 .show-header {
-    background: white;
+    /* background: white; */
+    background: rgba(147, 248, 231, 1);
     transition: 1s;
 }
 .hide-header {
@@ -169,7 +170,7 @@
 }
 
 .gallery-photo:hover {
-    transform: scale(0.93);
+    transform: scale(0.95);
     box-shadow: 0 10px 20px 3px rgb(0, 0, 0, 0.3);
 }
 
