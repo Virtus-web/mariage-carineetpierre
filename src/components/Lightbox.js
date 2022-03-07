@@ -7,7 +7,7 @@ import { useContext } from 'react'
 // const itemsGallery = Array.from(document.querySelectorAll('.photo__content__items'));
 // let i = itemsGallery.indexOf(event.target);
 
-function Lightbox({show}) {
+function Lightbox() {
 
     // const modal = document.querySelector(".lightbox")
     // const handleClick = () => {
