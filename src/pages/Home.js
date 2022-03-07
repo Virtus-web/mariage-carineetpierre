@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import Presentation from '../components/Presentation'
 import Couple from '../components/Couple'
 import CountDownTimer from '../components/CountDownTimer'
-// import Wife from '../assets/Wife.jpg'
-import Husband from '../assets/Husband.jpg'
-import Husband2 from '../assets/Husband2.jpg'
+import Wife from '../assets/images/Wife.jpg'
+import Husband from '../assets/images/Husband.jpg'
+// import Husband2 from '../assets/images/Husband2.jpg'
 
 
 const CoupleBox = styled.div`
@@ -27,7 +27,7 @@ function Home() {
             <Presentation />
             <h2 className="title" style={{color: 'rgba(40, 44, 52, 0.8)', display:'inline-block', lineHeight: '2em', marginTop: '2em'}}>The Happy Couple</h2>
             <CoupleBox>
-                <Couple who={Husband2} name='Nico' />
+                <Couple who={Wife} name='Carine' />
                 <Couple who={Husband} name='Pierre' />
             </CoupleBox>
             <CountDownTimer />

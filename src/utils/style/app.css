@@ -163,6 +163,16 @@
     opacity: 0.5;
 }
 
+.gallery-photo {
+    transition: transform 450ms, background-color 300ms, box-shadow 300ms;
+    transition-delay: 0ms, 150ms, 150ms;
+}
+
+.gallery-photo:hover {
+    transform: scale(0.93);
+    box-shadow: 0 10px 20px 3px rgb(0, 0, 0, 0.3);
+}
+
 
 @keyframes App-logo-spin {
   from {

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import HappyCouple from '../assets/cover.jpg'
+import HappyCouple from '../assets/images/cover.jpg'
 
 
 const PhotoBox = styled.div`
@@ -43,7 +43,7 @@ function Presentation() {
             <Styledpics src={HappyCouple} alt='couple'/>
             <PhotoModal>
                 <PhotoInfo>
-                    <h2 style={{height: '3em', margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '2.5em'}}>Pierre & Nico</h2>
+                    <h2 style={{height: '3em', margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '2.5em'}}>Pierre & Carine</h2>
                     <p style={{borderBottom: '0.001em solid white', margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '1.5em', fontFamily: 'Amatic SC'}}>Are getting married</p>
                     <p style={{margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '1.5em', fontFamily: 'Amatic SC'}}>January 22th 2023</p>
                 </PhotoInfo>

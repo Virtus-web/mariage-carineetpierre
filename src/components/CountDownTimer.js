@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import Background from '../assets/Background.jpg'
+import Background from '../assets/images/Background.jpg'
 
 
 const Bloc = styled.div`

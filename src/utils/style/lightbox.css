@@ -1,0 +1,81 @@
+.lightbox {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .9);
+    /* overflow: auto; */
+    display: none;
+    animation: openLightbox .5s;
+    transition: opacity .3s;
+}
+
+.active.lightbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closing.lightbox {
+    opacity: 0;
+}
+
+button {
+    opacity: .5;
+    cursor: pointer;
+    text-indent: -1000em;
+    transition: opacity .3s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.lightbox__prev,
+.lightbox__next {
+    border: none;
+    background: url(../../assets/outils/arrow.svg) center center / 2em 5em no-repeat;
+    width: 5em;
+    height: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 100;
+    opacity: .5;
+}
+
+.lightbox__next {
+    right: 0;
+    left: auto;
+    transform: rotate(180deg);
+}
+
+.lightbox__close {
+    background: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 2.64275L13.3573 0.5L8 5.85725L2.64275 0.5L0.5 2.64275L5.85725 8L0.5 13.3573L2.64275 15.5L8 10.1427L13.3573 15.5L15.5 13.3573L10.1427 8L15.5 2.64275Z" fill="white"/></svg>') center center / 100% 100% no-repeat transparent;
+    width: 3em;
+    height: 3em;
+    border: none;
+    position: fixed;
+    z-index: 101;
+    top: 1em;
+    right: 1em;        
+}
+
+.lightbox__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    /* Mettre sur auto si on veut garder l'homotéthie mais il faudra ajouter overflow: auto à lightbox */
+    max-width: 100%;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.lightbox__media {
+    object-fit:contain;
+    height: 100%;
+    width: 100%;
+}
