@@ -152,6 +152,13 @@
 }
 
 
+@media screen and (max-width: 780px) {
+    .names > h2 {
+        width: 3em;
+    }
+}
+
+
 .title:after {
     display:block;
     content: '';

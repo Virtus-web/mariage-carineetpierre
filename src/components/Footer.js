@@ -21,7 +21,7 @@ function Footer() {
 
     return (
         <FooterContainer>
-            <StyledLink to='/event'>Répoonse souhaitée avant le 30 Septembre</StyledLink>
+            <StyledLink to='/event'>Réponse souhaitée avant le 30 Septembre</StyledLink>
         </FooterContainer>
     )
 }

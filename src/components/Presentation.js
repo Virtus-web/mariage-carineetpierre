@@ -25,14 +25,16 @@ const PhotoModal = styled.div`
     z-index: 200;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 `
 
 const PhotoInfo = styled.div`
+    height: 100%;
+    padding: 1em 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 `
 
@@ -42,10 +44,12 @@ function Presentation() {
         <PhotoBox>
             <Styledpics src={HappyCouple} alt='couple'/>
             <PhotoModal>
-                <PhotoInfo>
-                    <h2 style={{color: 'rgba(40, 44, 52, 0.8)', height: '3em', margin: 0, fontSize: '2.5em'}}>Pierre & Carine</h2>
-                    <p style={{borderBottom: '0.001em solid white', margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '1.5em', fontFamily: 'Amatic SC'}}>Are getting married</p>
-                    <p style={{margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '1.5em', fontFamily: 'Amatic SC'}}>January 22th 2023</p>
+                <PhotoInfo className="names">
+                    <h2 style={{color: 'rgba(40, 44, 52, 0.8)', height: '3em', margin: 0, fontSize: '2.5em'}}>Carine & Pierre</h2>
+                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                        <p style={{borderBottom: '0.001em solid white', margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '1.5em', fontFamily: 'Amatic SC'}}>Are getting married</p>
+                        <p style={{margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '1.5em', fontFamily: 'Amatic SC'}}>January 22th 2023</p>
+                    </div>
                 </PhotoInfo>
             </PhotoModal>
         </PhotoBox>

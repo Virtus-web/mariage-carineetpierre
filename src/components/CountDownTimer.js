@@ -8,10 +8,14 @@ const Bloc = styled.div`
     background-position: 25% 40%;
     margin-top: 3em;
     width: 100%;
-    height: 30em;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    @media screen and (max-width: 780px) {
+        height: 30vh;
+        background-size: cover;
+    }
 `
 
 const Container = styled.div`
