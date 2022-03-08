@@ -61,9 +61,6 @@ function Gallery() {
     const { activeModal } = useContext(ThemeContext)
 
     const [ currentPhoto, setCurrentPhoto ] = useState(0)
-    const getCurrentIndex = (target) => {
-        setCurrentPhoto(target)
-    }
 
     const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
@@ -82,7 +79,7 @@ function Gallery() {
                         photosData.map((element, index) => {
                             return (
                                 <div key={index} onClick={() => {
-                                    getCurrentIndex(index+1)
+                                    setCurrentPhoto(index+1)
                                     activeModal()
                                 }}>
                                     <CardPhoto className="gallery-photo" src={`../../photos/photo_${element}.jpg`} alt="pics" />
