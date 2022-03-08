@@ -4,16 +4,19 @@
 }
 
 .lightbox {
+    padding: 5em;
     position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
-    width: 100vw;
+    right: 0;
+    bottom: 0;
+    width: auto;
     height: 100vh;
     background-color: rgba(0, 0, 0, .9);
     display: none;
     /* overflow: hidden; */
-    animation: openLightbox .5s;
+    animation: openLightbox .7s;
 }
 
 .active.lightbox {
@@ -24,15 +27,30 @@
 
 
 .lightbox__container {
-    max-width: 100vw;
+    width: auto;
     height: 100vh;
-    margin: 10vh auto 0 auto;
+    /* margin: 15vh 5vw 0 5vw; */
     overflow: hidden;
 }
 @media screen and (max-width: 780px) {
     .container-slider {
         margin: 10vh 10vw;
     }
+}
+
+.photo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100%; */
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: opacity ease-in-out 0.3s;
+}
+
+.anim {
+    opacity: 0;
 }
 
 button {
@@ -49,7 +67,7 @@ button:hover {
 .lightbox__prev,
 .lightbox__next {
     border: none;
-    background: url(../../assets/outils/arrow.svg) center center / 2em 5em no-repeat;
+    background: url(../../assets/outils/arrow.svg) center center / 5em 5em no-repeat;
     width: 5em;
     height: 100%;
     position: fixed;
@@ -76,25 +94,21 @@ button:hover {
     right: 1em;        
 }
 
-.lightbox__container {
+
+/* .lightbox__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    /* Mettre sur auto si on veut garder l'homotéthie mais il faudra ajouter overflow: auto à lightbox */
-    max-width: 100%;
-    margin-left: 5em;
+    max-height: 85vh; */
+    /* Mettre sur auto si on veut garder l'homotéthie mais il faudra ajouter overflow: auto à lightbox pour voir un scroll */
+    /* max-width: 100%; */
+    /* margin-left: 5em;
     margin-right: 5em;
-}
+} */
 
-.photo-box {
+/* .photo-box {
     width: 100vw;
     height: 100vh;
     opacity: 1;
     transition: opacity ease-in-out 0.5s;
-}
-
-.anim.photo-box {
-    opacity: 1;
-    background-color: blue;
-}
+} */

@@ -1,23 +1,24 @@
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import Photos from '../components/Photos'
 import Trailers from '../components/Trailers'
 
 
-// const GalleryBox = styled.div`
-    
-// `
-
-// const CardPhoto = styled.img`
-    
-// `
+const GalleryBox = styled.div`
+    padding: 1em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+`
 
 function Gallery() {
 
     return (
-        <div>
+        <GalleryBox>
             <Trailers />
             <Photos />
-        </div>
+        </GalleryBox>
     )
 }
 

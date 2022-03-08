@@ -44,7 +44,7 @@ function Lightbox({currentPhoto}) {
                     photosData ? (
                         photosData.map((element, index) => {
                             return (
-                                <div key={index} className={slider === index+1 ? "photo-box anim" : "photo-box"}>
+                                <div key={index} className={`photo-box${slider === index+1 ? " anim" : ""}`}>
                                     <Photo src={`../../photos/photo_${slider}.jpg`} alt="pics" />
                                 </div>
                             )

@@ -6,12 +6,13 @@ import Lightbox from './Lightbox'
 
 
 const PhotoBox = styled.div`
-    margin-top: 3em;
-    padding: 1em;
-    width: auto;
+    margin: 1em auto 0 auto;
+    padding: 1em 0 0 1em;
+    ${'' /* width: auto; */}
+    width: 25em;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flew-start;
     align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 780px) {
@@ -20,8 +21,8 @@ const PhotoBox = styled.div`
 `
 
 const CardPhoto = styled.img`
-    height: 5em;
-    width: 5em;
+    height: 6em;
+    width: 6em;
     margin: 1em 1em;
     object-fit: cover;
     border-radius: 0.5em;
@@ -54,6 +55,7 @@ function Gallery() {
     return (
         <Fragment>
             <PhotoBox>
+                <h2 style={{textAlign: 'center', width: '100%', color: 'white', fontSize: '2.5em'}}>Gallerie photos du site Les Rhodos</h2>
                 {
                     photosData ? (
                         photosData.map((element, index) => {

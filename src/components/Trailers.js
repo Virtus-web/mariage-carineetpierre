@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 const VideoBox = styled.div`
-    padding: 1em;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 `
 
 const Player = styled.video`
