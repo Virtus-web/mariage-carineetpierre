@@ -17,6 +17,11 @@ const PhotoBox = styled.div`
     flex-wrap: wrap;
     @media screen and (max-width: 780px) {
         padding: 0.1em;
+        width: 15em;
+    }
+    @media screen and (max-width: 480px) {
+        padding: 0.1em;
+        width: 10em;
     }
 `
 
@@ -30,8 +35,24 @@ const CardPhoto = styled.img`
     cursor: pointer;
     @media screen and (max-width: 780px) {
         margin: 0.5em 0.5em;
-        height: 5em;
-        width: 5em;
+        height: 4em;
+        width: 4em;
+    }
+    @media screen and (max-width: 280px) {
+        height: 3em;
+        width: 3em;
+    }
+`
+
+const GalleryTitle = styled.div`
+    margin: 1em auto 0 auto;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 2.5em;
+    @media screen and (max-width: 780px) {
+        width: 80%;
+        font-size: 1.5em;
     }
 `
 
@@ -54,8 +75,8 @@ function Gallery() {
     
     return (
         <Fragment>
+            <GalleryTitle>Gallerie photos du site Les Rhodos</GalleryTitle>
             <PhotoBox>
-                <h2 style={{textAlign: 'center', width: '100%', color: 'white', fontSize: '2.5em'}}>Gallerie photos du site Les Rhodos</h2>
                 {
                     photosData ? (
                         photosData.map((element, index) => {
