@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import Presentation from '../components/Presentation'
 import Couple from '../components/Couple'
 import CountDownTimer from '../components/CountDownTimer'
-import Wife from '../../images/Wife.jpg'
-import Husband from '../../images/Husband.jpg'
-// import Husband2 from '../../images/Husband2.jpg'
+import Wife from '../assets/images/Wife.jpg'
+import Husband from '../assets/images/Husband.jpg'
+// import Husband2 from '../assets/images/Husband2.jpg'
 
 
 const CoupleBox = styled.div`
