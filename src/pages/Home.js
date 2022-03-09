@@ -4,8 +4,15 @@ import Couple from '../components/Couple'
 import CountDownTimer from '../components/CountDownTimer'
 import Wife from '../assets/images/Wife.jpg'
 import Husband from '../assets/images/Husband.jpg'
-// import Husband2 from '../assets/images/Husband2.jpg'
+import Logo from '../assets/images/FairePart.jpg'
 
+
+const LogoBox = styled.div`
+    background-image: linear-gradient(rgba(64, 88, 68, 0.9), rgba(64, 88, 68, 0.7)), url(${Logo});
+    background-position: 50% 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+`
 
 const CoupleBox = styled.div`
     margin-top: 3em;
@@ -23,16 +30,16 @@ const CoupleBox = styled.div`
 function Home() {
     
     return (
-        <div>
+        <LogoBox>
             <Presentation />
             {/* <h2 className="title" style={{color: 'rgba(40, 44, 52, 0.8)', display:'inline-block', lineHeight: '2em', marginTop: '2em'}}>The Happy Couple</h2> */}
             <h2 className="title" style={{color: 'white', display:'inline-block', lineHeight: '2em', marginTop: '2em'}}>The Happy Couple</h2>
             <CoupleBox>
-                <Couple who={Wife} name='Carine' />
-                <Couple who={Husband} name='Pierre' />
+                <Couple who={Wife} name='La Mariée' />
+                <Couple who={Husband} name='Le Marié' />
             </CoupleBox>
             <CountDownTimer />
-        </div>
+        </LogoBox>
     )
 }
 

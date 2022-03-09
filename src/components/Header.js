@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+import FairePart from '../assets/images/FairePart.jpg'
 
 
 const HeaderContainer = styled.header`
@@ -36,6 +37,11 @@ const StyledLink = styled(NavLink)`
     }
 `
 
+const Logo = styled.img`
+    height: 3em;
+    width: 3em;
+`
+
 function Header() {
 
     const [scrolling, setScrolling] = useState(false)
@@ -55,6 +61,7 @@ function Header() {
     return (
         <HeaderContainer className={scrolling ? "show-header" : "hide-header"}>
             <div className={`nav-container ${showNav ? "show-nav" : "hide-nav"}`}>
+                <Logo src={FairePart} alt="logo" />
                 <StyledLink exact to='/' className={`nav-link slide-1 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Home</StyledLink>
                 <StyledLink to='/event' className={`nav-link slide-2 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Event</StyledLink>
                 <StyledLink to='/gallery' className={`nav-link slide-3 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Gallery</StyledLink>
