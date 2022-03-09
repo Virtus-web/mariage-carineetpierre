@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import HappyCouple from '../assets/images/cover.jpg'
+import HappyCouple from '../../images/cover.jpg'
 
 
 const PhotoBox = styled.div`
