@@ -51,6 +51,7 @@
         position: fixed;
         top: 2em;
         right: 20vw;
+        padding-bottom: 3em;
     }
     .nav-burger:hover {
         cursor: pointer
@@ -115,7 +116,6 @@
         top: 0;
         width: 100vw;
         height: 100vh;
-        padding: 1rem;
         background-color: rgba(0, 0, 0, 0.9);
         visibility: hidden;
         transition: all .8s ease-in-out;

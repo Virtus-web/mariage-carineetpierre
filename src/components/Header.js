@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import FairePart from '../assets/images/FairePart.jpg'
+// import FairePart from '../assets/images/FairePart.jpg'
 
 
 const HeaderContainer = styled.header`
     border-bottom: 0.01em solid #282c34;
+    ${'' /* margin-top: 0.5em; */}
     padding: 0.5em 1em 1.5em 1em;
     position: fixed;
     top: 0;
@@ -16,6 +17,7 @@ const HeaderContainer = styled.header`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 3vh;
     @media screen and (max-width: 780px) {
         height: 4vh;
         border-bottom: none;
@@ -37,10 +39,10 @@ const StyledLink = styled(NavLink)`
     }
 `
 
-const Logo = styled.img`
-    height: 3em;
-    width: 3em;
-`
+// const Logo = styled.img`
+//     height: 3em;
+//     width: 3em;
+// `
 
 function Header() {
 
@@ -61,7 +63,7 @@ function Header() {
     return (
         <HeaderContainer className={scrolling ? "show-header" : "hide-header"}>
             <div className={`nav-container ${showNav ? "show-nav" : "hide-nav"}`}>
-                <Logo src={FairePart} alt="logo" />
+                {/* <Logo src={FairePart} alt="logo" /> */}
                 <StyledLink exact to='/' className={`nav-link slide-1 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Home</StyledLink>
                 <StyledLink to='/event' className={`nav-link slide-2 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Event</StyledLink>
                 <StyledLink to='/gallery' className={`nav-link slide-3 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Gallery</StyledLink>

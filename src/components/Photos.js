@@ -7,7 +7,7 @@ import Lightbox from './Lightbox'
 
 const PhotoBox = styled.div`
     margin: 1em auto 0 auto;
-    padding: 1em 0 0 1em;
+    padding: 1em 0 0 2em;
     ${'' /* width: auto; */}
     width: 25em;
     display: flex;
@@ -16,18 +16,22 @@ const PhotoBox = styled.div`
     align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 780px) {
-        padding: 0.1em;
         width: 15em;
+        padding: 1em 0 0 0;
     }
     @media screen and (max-width: 480px) {
-        padding: 0.1em;
         width: 10em;
+    }
+    @media screen and (max-width: 360px) {
+        flex-direction: column;
+        width: auto;
+        padding: 0;
     }
 `
 
 const CardPhoto = styled.img`
-    height: 6em;
-    width: 6em;
+    height: 9em;
+    width: 9em;
     margin: 1em 1em;
     object-fit: cover;
     border-radius: 0.5em;
@@ -38,9 +42,9 @@ const CardPhoto = styled.img`
         height: 4em;
         width: 4em;
     }
-    @media screen and (max-width: 280px) {
-        height: 3em;
-        width: 3em;
+    @media screen and (max-width: 360px) {
+        height: 7em;
+        width: 7em;
     }
 `
 
