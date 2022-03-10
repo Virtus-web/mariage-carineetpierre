@@ -1,7 +1,9 @@
+import { Fragment } from 'react'
 import styled from 'styled-components'
 import Photos from '../components/Photos'
 import Trailers from '../components/Trailers'
 import Ornement from '../assets/images/Ornement4.svg'
+import Footer from '../components/Footer'
 
 
 const GalleryBox = styled.div`
@@ -26,10 +28,14 @@ const GalleryBox = styled.div`
 function Gallery() {
 
     return (
-        <GalleryBox>
-            <Trailers />
-            <Photos />
-        </GalleryBox>
+        
+        <Fragment>
+            <GalleryBox>
+                <Trailers />
+                <Photos />
+            </GalleryBox>
+            <Footer />
+        </Fragment>
     )
 }
 

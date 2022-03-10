@@ -1,12 +1,11 @@
-import Guestlist from '../components/GuestList'
-import Form from '../components/Form'
+import Footer from '../components/Footer'
+
 
 function Event() {
 
     return (
-        <div>
-            <Guestlist />
-            <Form />
+        <div style={{minHeight: '100vh'}}>
+            <Footer />
         </div>
     )
 }

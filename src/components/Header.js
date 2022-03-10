@@ -67,7 +67,7 @@ function Header() {
                 <StyledLink exact to='/' className={`nav-link slide-1 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Home</StyledLink>
                 <StyledLink to='/event' className={`nav-link slide-2 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Event</StyledLink>
                 <StyledLink to='/gallery' className={`nav-link slide-3 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Gallery</StyledLink>
-                <StyledLink to='/about' className={`nav-link slide-4 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>A propos</StyledLink>
+                <StyledLink to='/contact' className={`nav-link slide-4 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Contact</StyledLink>
             </div>
             <button className={`nav-burger ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>
                 <span className={`burger-bar ${showNav ? "show-nav" : "hide-nav"}`}></span>

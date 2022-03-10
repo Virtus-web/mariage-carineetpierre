@@ -50,14 +50,19 @@
     opacity: 1;
 }
 
-button {
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next
+ {
     opacity: .5;
     cursor: pointer;
     text-indent: -1000em;
     transition: opacity .3s;
 }
 
-button:hover {
+.lightbox__close:hover,
+.lightbox__prev:hover,
+.lightbox__next:hover {
     opacity: 1;
 }
 

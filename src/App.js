@@ -5,11 +5,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { ThemeContext } from './utils/context'
 import GlobalStyle from './utils/GlobalStyle'
 import Header from './components/Header'
-import Footer from './components/Footer'
 import Home from './pages/Home'
 import Event from './pages/Event'
 import Gallery from './pages/Gallery'
-import About from './pages/About'
+import Contact from './pages/Contact'
 import Error from './pages/Error'
 
 
@@ -28,20 +27,19 @@ function App() {
 
     return (
         <BrowserRouter className="App">
-            <GlobalStyle />
-            <BlocPage>
-                <Header />
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/event" component={Event} />
-                    <ThemeContext.Provider value={{ modal, activeModal }}>
+            <ThemeContext.Provider value={{ modal, activeModal }}>
+                <GlobalStyle />
+                <BlocPage>
+                    <Header />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/event" component={Event} />
                         <Route exact path="/gallery" component={Gallery} />
-                    </ThemeContext.Provider>
-                    <Route exact path="/about" component={About} />
-                    <Route path="*" component={Error} />
-                </Switch>
-                <Footer />
-            </BlocPage>
+                        <Route exact path="/contact" component={Contact} />
+                        <Route path="*" component={Error} />
+                    </Switch>
+                </BlocPage>
+            </ThemeContext.Provider>
         </BrowserRouter>
     )
 }
