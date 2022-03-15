@@ -53,7 +53,9 @@ function Home() {
                     <Kids who={Edouard} />
                     <Couple who={Husband} name='Le Marié' />
                 </CoupleBox>
-                <p style={{color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.5em', height: 'auto', marginLeft: 'auto', marginRight: 'auto', fontSize: '1.5em', textAlign: 'center', width: '87%'}}>Lorem ipsum dolor sit amet. Sit sequi galisum sit voluptatem culpa et omnis dolor aut quos deleniti ut harum aliquam sit itaque architecto est nihil molestias. Lorem ipsum dolor sit amet. Sit sequi galisum sit voluptatem culpa et omnis dolor aut quos deleniti ut harum aliquam sit itaque architecto est nihil molestias.</p>
+                <p style={{color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.5em', height: 'auto', marginLeft: 'auto', marginRight: 'auto', fontSize: '1.5em', textAlign: 'center', width: '87%'}}>C'est avec la plus grande joie et beaucoup d'émotion que Carine & Pierre, entourés de leurs parents Annick & Yves, Patricia & Pascal vous invitent à célébrer leur mariage</p>
+                <p>Chalet Les Rhodos Col des Aravis Entre la Clusaz et Megève, 74220 La Clusaz</p>
+                <p>Nous serions très heureux de pouvoir partager ce moment unique avec vous au milieu des montagnes enneigées.</p>
                 <CountDownTimer />
             </LogoBox>
             <Footer />

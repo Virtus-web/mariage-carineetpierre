@@ -17,6 +17,9 @@ const StyledLink = styled(Link)`
     opacity: .5;
     cursor: pointer;
     transition: opacity .3s;
+    @media screen and (max-width: 340px) {
+        font-size: 1em;
+    }
 `
 
 function Footer() {

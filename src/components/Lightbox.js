@@ -11,6 +11,7 @@ const Photo = styled.img`
     object-fit: contain;
 `
 
+//mediafactory
 
 function Lightbox({currentPhoto}) {
     
@@ -33,6 +34,37 @@ function Lightbox({currentPhoto}) {
         return <span>Oups il y a eu un problème</span>
     }
 
+    // const mediafactory = (media) => {
+    //     let mediaHTML = "";
+
+    //     if (media.image) {
+    //         mediaHTML = 
+    //         ` <a href="#">
+    //             <img src="./images/photos/${media.image}" alt="${media.title}" class="photo__content__items" id="item${media.id}" onclick="openLightbox('img', event)"/>
+    //         </a>
+    //         ` 
+    //     }else if (media.video) {
+    //         mediaHTML = 
+    //         ` <a href="#">
+    //             <video controls alt="${media.title}" class="photo__content__items" id="item${media.id}" onclick="openLightbox('video', event)">
+    //                 <source src="./images/photos/${media.video}" type="video/mp4">
+    //             </video>
+    //         </a>
+    //         `
+    //     }
+
+    //     return mediaHTML
+    // }
+
+
+    // const extension = (pic) => {
+    //     const ext = pic.split('.')[1] === "jpeg" ? "jpeg" : "jpg"
+    //     return ext
+    // }
+
+    // console.log(element.split('.')[1])
+    // console.log(photosData.indexOf(element))
+
     return (
         <div className={`lightbox ${modal}`}>
             <button className="lightbox__close" onClick={() => {
@@ -45,9 +77,16 @@ function Lightbox({currentPhoto}) {
                 {
                     photosData ? (
                         photosData.map((element, index) => {
+                    
                             return (
                                 <div key={index} className={`photo-box${number === (index + 1) ? " anim" : ""}`}>
-                                    <Photo src={`../../photos/photo_${number}.jpg`} alt="pics" />
+                                    {
+                                        number < 8 ? (
+                                            <Photo src={`../../photos/photo_${number}.jpeg`} alt="pics" />
+                                        ) : (
+                                            <Photo src={`../../photos/photo_${number}.jpg`} alt="pics" />
+                                        )
+                                    }
                                 </div>
                             )
                         })) : (null)

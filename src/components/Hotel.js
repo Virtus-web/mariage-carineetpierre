@@ -100,10 +100,7 @@ const range = [1, 2, 3, 4]
 //redirect ou Link
 function Hotel() {
 
-    const { data, error } = useData (`../../hotel-data.json`)
-
-    // const photosData = data[0]?.locationData
-    console.log(data)
+    const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/hotels`)
 
     if (error) {
         return <span>Oups il y a eu un problème</span>
@@ -116,7 +113,7 @@ function Hotel() {
                     data ? (
                         data.map((element, index) => {
                             return (
-                                <HotelCard className="zoom" href={element.site} key={index} target="_blank">
+                                <HotelCard key={index} className="zoom" href={element.site} target="_blank">
                                     <HotelImg src={`../../hotels/heb${element.photo}`} alt={element.nom} />
                                     <HotelModal>
                                     <TextBox>
@@ -124,8 +121,8 @@ function Hotel() {
                                         <StarBox>
                                             {range.map((rangeStar, index) =>
                                                 element.star >= rangeStar ? (
-                                                    <Fragment>
-                                                        <StarImg key={index} src={star} alt="hotel-star" />
+                                                    <Fragment key={index}>
+                                                        <StarImg src={star} alt="hotel-star" />
                                                     </Fragment>
                                                 ) : null
                                             )}

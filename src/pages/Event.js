@@ -7,6 +7,9 @@ import Plan from '../assets/images/planHotels.png'
 
 const HotelTitle = styled.h2`
     font-size: 2em;
+    @media screen and (max-width: 340px) {
+        font-size: 1em;
+    }
 `
 
 const HotelContainer = styled.div`
