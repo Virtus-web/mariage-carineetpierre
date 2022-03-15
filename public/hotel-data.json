@@ -1,0 +1,122 @@
+[
+    {
+        "num": 1,
+        "photo": "1.jpeg",
+        "nom": "La Serraz",
+        "star": 4,
+        "site": "https://www.chalets-la-serraz.fr"
+    },
+    {
+        "num": 2,
+        "photo": "2.jpeg",
+        "nom": "U Freddy",
+        "star": 2,
+        "site": "https://www.ufredy.com"
+    },
+    {
+        "num": 3,
+        "photo": "3.jpg",
+        "nom": "Auberge Jeunesse",
+        "star": 1,
+        "site": "https://www.hifrance.org"
+    },
+    {
+        "num": 4,
+        "photo": "4.jpeg",
+        "nom": "Gotty",
+        "star": 2,
+        "site": "http://hotel-le-gotty.la-clusaz.hotels-fr.net/fr/"
+    },
+    {
+        "num": 5,
+        "photo": "5.jpeg",
+        "nom": "L’Armanaz",
+        "star": 3,
+        "site": "https://www.chalet-armanaz.fr"
+    },
+    {
+        "num": 6,
+        "photo": "6.jpeg",
+        "nom": "Flor Alpes",
+        "star": 2,
+        "site": "https://floralpes.com"
+
+    },
+    {
+        "num": 7,
+        "photo": "7.jpg",
+        "nom": "Flocons des Aravis",
+        "star": 3,
+        "site": "https://www.chalet-flocondesaravis.com"
+    },
+    {
+        "num": 8,
+        "photo": "8.jpeg",
+        "nom": "Le Biollay d’en haut",
+        "star": 2,
+        "site": "https://biollay-montblanc.fr"
+    },
+    {
+        "num": 10,
+        "photo": "10.jpeg",
+        "nom": "La Ferme",
+        "star": 2,
+        "site": "https://www.lesfermiers.com"
+    },
+    {
+        "num": 11,
+        "photo": "11.jpeg",
+        "nom": "Le Christiana",
+        "star": 3,
+        "site": "https://www.hotel-christiania.fr"
+    },
+    {
+        "num": 12,
+        "photo": "12.jpeg",
+        "nom": "Odalys Mendi Adle",
+        "star": 3,
+        "site": "https://www.odalys-vacances.com/location-montagne/haute-savoie/la-clusaz/hotel-le-chamois.html#ectrans=1"
+    },
+    {
+        "num": 13,
+        "photo": "13.jpeg",
+        "nom": "Odalys Le Chamois",
+        "star": 3,
+        "site": "https://www.odalys-vacances.com/location-montagne/haute-savoie/la-clusaz/hotel-le-chamois.html#ectrans=1"
+    },
+    {
+        "num": 14,
+        "photo": "14.jpeg",
+        "nom": "Les Cîmes",
+        "star": 3,
+        "site": "https://www.residences-pvg.fr"
+    },
+    {
+        "num": 15,
+        "photo": "15.jpeg",
+        "nom": "Les Grandes Alpes",
+        "star": 3,
+        "site": "https://www.residences-pvg.fr"
+    },
+    {
+        "num": 17,
+        "photo": "17.jpeg",
+        "nom": "Beaulieu",
+        "star": 2,
+        "site": "http://www.hotel-carlina.com/chambres/#chambres-hotel-beaulieu"
+    },
+    {
+        "num": 19,
+        "photo": "19.jpeg",
+        "nom": "Le Borderan",
+        "star": 2,
+        "site": "http://hotel-borderan.com"
+    },
+    {
+        "num": 20,
+        "photo": "20.jpeg",
+        "nom": "Bibollet Apparts",
+        "star": 2,
+        "site": "https://www.bibolletapparts.com/contact-fullwidth-map/"
+    }
+]

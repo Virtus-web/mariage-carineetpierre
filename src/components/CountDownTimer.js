@@ -4,7 +4,7 @@ import Background from '../assets/images/Background.jpg'
 
 
 const Bloc = styled.div`
-    background-image: linear-gradient(rgba(0, 0, 255, 0.1), rgba(255, 255, 0, 0.1)), url(${Background});
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 70, 0, 0.5)), url(${Background});
     background-position: 25% 40%;
     margin-top: 3em;
     width: 100%;
@@ -12,9 +12,11 @@ const Bloc = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    padding-bottom: 10vh;
     @media screen and (max-width: 780px) {
-        height: 30vh;
+        height: 15vh;
         background-size: cover;
+        padding-bottom: 3vh;
     }
 `
 
@@ -43,7 +45,7 @@ const Number = styled.div`
     font-size: 3em;
     @media screen and (max-width: 780px) {
         border: 1.5px solid white;
-        font-size: 2em;
+        font-size: 1.5em;
         width: 1em;
     }
 `

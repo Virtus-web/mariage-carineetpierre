@@ -25,16 +25,21 @@ function App() {
         setModal(modal === 'active' ? '' : 'active')
     }
 
+    const [warning, setWarning] = useState('')
+    const activeWarning = () => {
+        setWarning(warning === 'active' ? '' : 'active')
+    }
+
     return (
         <BrowserRouter className="App">
-            <ThemeContext.Provider value={{ modal, activeModal }}>
+            <ThemeContext.Provider value={{ modal, activeModal, warning, activeWarning }}>
                 <GlobalStyle />
                 <BlocPage>
                     <Header />
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route exact path="/event" component={Event} />
                         <Route exact path="/gallery" component={Gallery} />
+                        <Route exact path="/event" component={Event} />
                         <Route exact path="/contact" component={Contact} />
                         <Route path="*" component={Error} />
                     </Switch>

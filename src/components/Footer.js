@@ -7,20 +7,23 @@ import { Link } from 'react-router-dom'
 
 const FooterContainer = styled.footer`
     background-color: #282c34;
-    padding: 1em 2em 1em 2em;
-    color: white;
+    padding: 2em;
 `
 
 const StyledLink = styled(Link)`
     text-decoration: none;
     color: white;
+    font-size: 1.5em;
+    opacity: .5;
+    cursor: pointer;
+    transition: opacity .3s;
 `
 
 function Footer() {
 
     return (
         <FooterContainer>
-            <StyledLink to='/event'>Réponse souhaitée avant le 30 Septembre</StyledLink>
+            <StyledLink className="text-link" to='/contact'>Réponse souhaitée avant le 30 Septembre</StyledLink>
         </FooterContainer>
     )
 }

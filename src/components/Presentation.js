@@ -5,7 +5,7 @@ import HappyCouple from '../assets/images/cover.jpg'
 const PhotoBox = styled.div`
     margin-top: 1em;
     width: 100%;
-    height: 25em;
+    height: 30em;
     position: relative;
 `
 
@@ -13,6 +13,7 @@ const Styledpics = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    ${'' /* object-position: 5em; */}
     z-index: 100;
 `
 

@@ -1,25 +1,34 @@
-.formInput{
+.formInput {
     display: flex;
     flex-direction: column;
-    width: 280px;
+    width: 20vw;
 }
 
-input{
-    padding: 15px;
-    margin: 10px 0px;
+.input-text > input {
+    width: 100%;
+    /* padding: 0.5em; */
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin: 0 0 0.7em 0;
     border-radius: 5px;
     border: 1px solid gray;
+    font-size: 1em;
+    font-family: 'Cormorant Garamond';
+}
+
+.input-text > input::placeholder {
+    font-size: 1.3em;
 }
 
 
-label{
+label {
     font-size: 1em;
     color: gray;
 }
 
-span{
-    font-size: 12px;
-    padding: 3px;
+span {
+    font-family: 'Cormorant Garamond';
+    font-size: 1.2em;
     color: red;
     display: none;
 }
@@ -29,5 +38,74 @@ input:invalid[focused="true"]{
 }
 
 input:invalid[focused="true"] ~ span{
+    display: block;
+}
+
+/* MODAL */
+.form-modal {
+    padding: 0 5em 0 5em;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .9);
+    display: none;
+    animation: openLightbox .7s;
+}
+
+.active.form-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-modal-box {
+    width: 23vw;
+    height: 30vh;
+    background-color: rgba(64, 88, 68, 1);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.form-modal-box > h2 {
+    font-size: 2em;
+    color: white;
+}
+
+.form-modal-box > button {
+    background-color: white;
+    border-radius: .5em;
+    color: black;
+    font-size: 1.3em;
+    font-family: 'Cormorant Garamond';
+    width: 3em;
+    height: 3em;
+    border: none;
+    opacity: .7;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+
+.form-modal-box > button:hover {
+    opacity: 1;
+}
+
+.form-warning {
+    border: none;
+    margin-top: 2em;
+    color: red;
+    display: none;
+}
+
+.active.form-warning {
     display: block;
 }

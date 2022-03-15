@@ -53,7 +53,7 @@
 .lightbox__close,
 .lightbox__prev,
 .lightbox__next
- {
+{
     opacity: .5;
     cursor: pointer;
     text-indent: -1000em;

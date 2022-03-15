@@ -12,7 +12,7 @@ const PhotoBox = styled.div`
     width: 25em;
     display: flex;
     flex-direction: row;
-    justify-content: flew-start;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 780px) {
@@ -86,7 +86,7 @@ function Gallery() {
                                     setCurrentPhoto(index+1)
                                     activeModal()
                                 }}>
-                                    <CardPhoto className="gallery-photo" src={`../../photos/photo_${element}.jpg`} alt="pics" />
+                                    <CardPhoto className="gallery-photo" src={`../../photos/photo_${element}`} alt="pics" />
                                 </div>
                             )
                         })) : (null)

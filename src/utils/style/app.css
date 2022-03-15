@@ -22,14 +22,17 @@
 .nav-link:after {
     display:block;
     content: '';
-    border-bottom: 0.1rem solid rgba(40, 44, 52, 0.8);  
+    position: relative;
+    top: -0.1rem;
+    left: 0;
+    border-bottom: 0.15rem solid rgba(40, 44, 52, 0.8);  
     transform: scaleX(0); 
     transition: transform 250ms ease-in-out;
 }
 
 @media screen and (max-width: 780px) {
     .nav-link:after {
-        border-bottom: 0.1rem solid white;  
+        border-bottom: 0.15rem solid white;  
     }
 }
 
@@ -194,7 +197,7 @@
 
 
 /* FORMULAIRE */
-.app {
+.form-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,44 +215,124 @@
   background-position: center;
 }
 
-form {
+#form {
     background-color: white;
-    padding: 0px 60px;
     border-radius: 10px;
+    padding: 1em 2em 1em 2em;
+    width: auto;
 }
 
-h1 {
-    color: rgb(77, 1, 77);
-    text-align: center;
+form > h1,
+form > h2 {
+    font-family: 'Cormorant Garamond';
 }
 
-button {
+form > h2 {
+    margin-top: 2em;
+}
+
+/* form > button {
+    font-family: 'Cormorant Garamond';
+    margin: 1em 0 1em 0;
+    box-shadow: 0 0.5rem 1rem 0.01rem rgba(255, 255, 255, 0.3);
     display: block;
     width: 100%;
-    height: 50px;
-    margin-top: 3em;
-    margin-bottom: 1em;
-    padding: 0.5rem;
+    height: auto;
     border: 3px solid rgba(64, 88, 68, 0.9);
     border-radius: 999px;
     background-image: linear-gradient(to right, transparent 50%, rgba(40, 44, 52, 0.8) 50%, rgba(64, 88, 68, 0.9));
     background-size: 200%;
     color: rgba(64, 88, 68, 0.9);
-    font-size: 24px;
+    padding: 0.5em 0 0.5em 0;
+    font-size: 1.3em;
     font-weight: 500;
     cursor: pointer;
     transition: 0.4s ease-out;
+} */
+
+form > button {
+    font-family: 'Cormorant Garamond';
+    margin: 1.5em 0 1em 0;
+    padding: 0.3em;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px 0 rgb(0, 0, 0, 0.3);
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(0, 50, 0, 0.8) 90%);
+    font-size: 1.5em;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    border: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 450ms, background 300ms, box-shadow 300ms;
+    transition-delay: 0ms, 150ms, 150ms;
 }
 
-button:hover {
+/* form > button:hover {
     color: #fff;
     background-position: 100%;
     border: 3px solid #fff;
+} */
+
+form > button:hover {
+    transform: scale(0.93);
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 50, 0, 0.7) 90%); /* opacity: 0.9; ou lighten(couleur, %) */
+    box-shadow: 0 10px 20px 3px rgb(0, 0, 0, 0.3);
 }
 
 .radio-box {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.input-radio {
+    width: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-radio-btn {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.select-box {
+    padding: 0;
+    width: 100%;
+}
+
+.input-num {
+    font-family: 'Cormorant Garamond';
+    padding-bottom: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 0;
+    width: 2.3em;
+    height: 1.2em;
+    font-size: 1.2em;
+}
+
+.text-link:hover {
+    opacity: 1;
+}
+
+/* HOTELS */
+
+.zoom {
+    box-shadow: 0 15px 31px 0 rgb(255 255 255 / 20%);
+    transition: transform 250ms, box-shadow 150ms;
+    /* transition-delay: 0ms, 150ms, 150ms; */
+}
+
+.zoom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 31px 0 rgb(255 255 255 / 40%);
 }

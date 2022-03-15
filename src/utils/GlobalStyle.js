@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     * {
-        font-family: 'Cormorant Garamond', 'Parisienne', 'Amatic SC', 'Great Vibes', cursive, sans-serif;
+        font-family: 'Parisienne', 'Cormorant Garamond', 'Amatic SC', 'Great Vibes', cursive, sans-serif;
         text-align: center;
     }
 

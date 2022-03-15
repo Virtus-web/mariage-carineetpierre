@@ -25,10 +25,10 @@ const HeaderContainer = styled.header`
 `
 
 const StyledLink = styled(NavLink)`
-    height: 1.30em;
+    height: 1.32em;
     color: rgba(40, 44, 52, 0.8);
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.5em;
     text-decoration: none;
     margin: 0;
     @media screen and (max-width: 780px) {
@@ -64,10 +64,10 @@ function Header() {
         <HeaderContainer className={scrolling ? "show-header" : "hide-header"}>
             <div className={`nav-container ${showNav ? "show-nav" : "hide-nav"}`}>
                 {/* <Logo src={FairePart} alt="logo" /> */}
-                <StyledLink exact to='/' className={`nav-link slide-1 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Home</StyledLink>
-                <StyledLink to='/event' className={`nav-link slide-2 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Event</StyledLink>
-                <StyledLink to='/gallery' className={`nav-link slide-3 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Gallery</StyledLink>
-                <StyledLink to='/contact' className={`nav-link slide-4 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Contact</StyledLink>
+                <StyledLink exact to='/' className={`nav-link slide-1 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Accueil</StyledLink>
+                <StyledLink to='/gallery' className={`nav-link slide-2 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Gallerie</StyledLink>
+                <StyledLink to='/event' className={`nav-link slide-3 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Infos pratiques</StyledLink>
+                <StyledLink to='/contact' className={`nav-link slide-4 ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>Formulaire</StyledLink>
             </div>
             <button className={`nav-burger ${showNav ? "show-nav" : "hide-nav"}`} onClick={handleShowNav}>
                 <span className={`burger-bar ${showNav ? "show-nav" : "hide-nav"}`}></span>
