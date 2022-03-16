@@ -46,10 +46,9 @@ const TextOne = styled.p`
     font-size: 2em;
     text-align: center;
     width: 95%;
-    ${'' /* @media screen and (max-width: 920px) {
-        margin-top: 0;
-        flex-direction: column;
-    } */}
+    @media screen and (max-width: 640px) {
+        font-size: 1em;
+    }
 `
 
 
@@ -61,10 +60,9 @@ const TextTwo = styled.p`
     font-size: 1.5em;
     text-align: center;
     width: 50%;
-    ${'' /* @media screen and (max-width: 920px) {
-        margin-top: 0;
-        flex-direction: column;
-    } */}
+    @media screen and (max-width: 640px) {
+        font-size: 1em;
+    }
 `
 
 const TextThree = styled.p`
@@ -76,10 +74,9 @@ const TextThree = styled.p`
     font-size: 2em;
     text-align: center;
     width: 95%;
-    ${'' /* @media screen and (max-width: 920px) {
-        margin-top: 0;
-        flex-direction: column;
-    } */}
+    @media screen and (max-width: 640px) {
+        font-size: 1em;
+    }
 `
 
 

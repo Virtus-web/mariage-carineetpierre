@@ -15,7 +15,7 @@ function ModalForm() {
                 <button className="form-modal-close" onClick={() => {
                     window.location.reload()
                     activeModal()
-                }}>Close</button>
+                }}>Ok</button>
             </div>
         </div>
     )

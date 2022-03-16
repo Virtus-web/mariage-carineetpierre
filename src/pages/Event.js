@@ -1,11 +1,17 @@
-import { Fragment } from 'react'
+// import { Fragment } from 'react'
 import Hotel from '../components/Hotel'
 import Footer from '../components/Footer'
 import styled from 'styled-components'
 import Plan from '../assets/images/planHotels.png'
 
 
+const InfoBox = styled.div`
+    padding: 1em;
+`
+
 const HotelTitle = styled.h2`
+    margin: 0 0 1em 0;
+    color: white;
     font-size: 2em;
     @media screen and (max-width: 340px) {
         font-size: 1em;
@@ -13,7 +19,6 @@ const HotelTitle = styled.h2`
 `
 
 const HotelContainer = styled.div`
-    padding: 1em;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -31,14 +36,14 @@ const PlanBox = styled.img`
 function Event() {
 
     return (
-        <Fragment>
+        <InfoBox>
             <HotelTitle>Hébergements à proximité</HotelTitle>
             <HotelContainer>
                 <PlanBox src={Plan} alt="plan" />
                 <Hotel />
             </HotelContainer>
             <Footer />
-        </Fragment>
+        </InfoBox>
     )
 }
 

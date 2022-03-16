@@ -15,7 +15,6 @@ const HotelBox = styled.div`
     flex-wrap: wrap;
 `
 
-//Link ?
 const HotelCard = styled.a`
     text-decoration: none;
     color: black;

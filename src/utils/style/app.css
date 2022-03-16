@@ -198,21 +198,27 @@
 
 /* FORMULAIRE */
 .form-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: linear-gradient(
-      rgba(40, 44, 52, 0.3) 50%,
-      rgba(255, 255, 255, 0.9)
-    );
-  /* background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); */
-  background-size: cover;
-  background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(40, 44, 52, 0.3) 50%,
+        rgba(255, 255, 255, 0.9)
+        );
+    /* background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.9)
+        ),
+        url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"); */
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+}
+@media screen and (max-width: 640px) {
+    .form-container {
+        padding: 0;
+    }
 }
 
 #form {
@@ -220,7 +226,16 @@
     border-radius: 10px;
     padding: 1em 2em 1em 2em;
     width: auto;
+    margin: 0;
 }
+@media screen and (max-width: 640px) {
+    #form {
+        border-radius: 0;
+        padding: 1em 0.5em 1em 0.5em;
+    }
+}
+
+
 
 form > h1,
 form > h2 {
@@ -229,6 +244,15 @@ form > h2 {
 
 form > h2 {
     margin-top: 2em;
+}
+
+@media screen and (max-width: 640px) {
+    form > h1 {
+        font-size: 1.3em;
+    }
+    form > h2 {
+        font-size: 1em;
+    }
 }
 
 /* form > button {
@@ -252,7 +276,7 @@ form > h2 {
 
 form > button {
     font-family: 'Cormorant Garamond';
-    margin: 1.5em 0 1em 0;
+    margin: 1.5em auto 1em auto;
     padding: 0.3em;
     width: 100%;
     height: auto;
@@ -269,6 +293,13 @@ form > button {
     align-items: center;
     transition: transform 450ms, background 300ms, box-shadow 300ms;
     transition-delay: 0ms, 150ms, 150ms;
+}
+@media screen and (max-width: 640px) {
+    form > button {
+        font-size: 1em;
+        padding: 0.1em;
+        width: 80%;
+    }
 }
 
 /* form > button:hover {
@@ -304,8 +335,21 @@ form > button:hover {
     width: 1.5em;
     height: 1.5em;
 }
+@media screen and (max-width: 640px) {
+    .radio-box {
+        flex-direction: column;
+    }
+    .input-radio {
+        font-size: 0.7em;
+    }
+    .input-radio-btn {
+        width: 1em;
+        height: 1em;
+    }
+}
 
 .select-box {
+    margin: 0 auto 0 auto;
     padding: 0;
     width: 100%;
 }
@@ -318,6 +362,14 @@ form > button:hover {
     width: 2.3em;
     height: 1.2em;
     font-size: 1.2em;
+    padding: 0.5rem;
+}
+@media screen and (max-width: 640px) {
+    .input-num {
+        width: 1.5em;
+        height: 0.7em;
+        font-size: 1em;
+    }
 }
 
 .text-link:hover {

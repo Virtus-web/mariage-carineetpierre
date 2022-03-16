@@ -69,7 +69,6 @@ function Gallery() {
     const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
     const photosData = data[0]?.locationData
-    console.log(photosData)
 
     if (error) {
         return <span>Oups il y a eu un problème</span>
@@ -77,7 +76,7 @@ function Gallery() {
     
     return (
         <Fragment>
-            <GalleryTitle>Gallerie photos du site Les Rhodos</GalleryTitle>
+            <GalleryTitle>Lieu & Thème</GalleryTitle>
             <PhotoBox>
                 {
                     photosData ? (

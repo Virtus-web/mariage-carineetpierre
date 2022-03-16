@@ -15,9 +15,19 @@
     font-size: 1em;
     font-family: 'Cormorant Garamond';
 }
+@media screen and (max-width: 640px) {
+    .input-text > input {
+        width: 75%;
+    }
+}
 
 .input-text > input::placeholder {
     font-size: 1.3em;
+}
+@media screen and (max-width: 640px) {
+    .input-text > input::placeholder {
+        font-size: 1em;
+    }
 }
 
 
@@ -65,7 +75,7 @@ input:invalid[focused="true"] ~ span{
 
 
 .form-modal-box {
-    width: 23vw;
+    width: auto;
     height: 30vh;
     background-color: rgba(64, 88, 68, 1);
     border-radius: 1em;
@@ -73,12 +83,17 @@ input:invalid[focused="true"] ~ span{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1em;
+    padding: 1.3em;
 }
 
 .form-modal-box > h2 {
     font-size: 2em;
     color: white;
+}
+@media screen and (max-width: 640px) {
+    .form-modal-box > h2 {
+        font-size: 1.3em;
+    }
 }
 
 .form-modal-box > button {
@@ -93,6 +108,11 @@ input:invalid[focused="true"] ~ span{
     opacity: .7;
     cursor: pointer;
     transition: opacity .3s;
+}
+@media screen and (max-width: 640px) {
+    .form-modal-box > button {
+        font-size: 1em;
+    }
 }
 
 .form-modal-box > button:hover {

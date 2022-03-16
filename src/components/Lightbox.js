@@ -28,7 +28,7 @@ function Lightbox({currentPhoto}) {
 
     const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
-    const photosData = data?.locationData
+    const photosData = data[0]?.locationData
 
     if (error) {
         return <span>Oups il y a eu un problème</span>
@@ -64,6 +64,8 @@ function Lightbox({currentPhoto}) {
 
     // console.log(element.split('.')[1])
     // console.log(photosData.indexOf(element))
+
+    //Attention modifier json et bdd et src pour lightbox et pjotos pour l'extension
 
     return (
         <div className={`lightbox ${modal}`}>

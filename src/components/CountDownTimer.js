@@ -6,16 +6,17 @@ import Background from '../assets/images/Background.jpg'
 const Bloc = styled.div`
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 70, 0, 0.5)), url(${Background});
     background-position: 25% 40%;
+    background-size: 100%;
     margin-top: 3em;
     width: 100%;
-    height: 50vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 10vh;
     @media screen and (max-width: 780px) {
-        height: 15vh;
+        ${'' /* height: 15vh; */}
         background-size: cover;
         padding-bottom: 3vh;
     }
@@ -71,10 +72,9 @@ const Welcome = styled.p`
     font-weight: bold;
     text-align: center;
     width: 100%;
-    ${'' /* @media screen and (max-width: 920px) {
-        margin-top: 0;
-        flex-direction: column;
-    } */}
+    @media screen and (max-width: 640px) {
+        font-size: 1em;
+    }
 `
 
 const Explication = styled.p`
@@ -87,10 +87,9 @@ const Explication = styled.p`
     font-weight: bold;
     text-align: center;
     width: 90%;
-    ${'' /* @media screen and (max-width: 920px) {
-        margin-top: 0;
-        flex-direction: column;
-    } */}
+    @media screen and (max-width: 640px) {
+        font-size: 1em;
+    }
 `
 
 
@@ -129,8 +128,8 @@ function CountDownTimer() {
 
     return (        
         <Bloc>
-            <Welcome>Bienvenue à notre mariage !</Welcome>
-            <Explication>En attendant le grand jour, nous avons créé ce site composé de diverses sections afin de te tenir au courant de l’avancée du mariage et partager quelques infos pratiques. Un détail important, dans la section Présence tu peux confirmer ou non ta venue. Bonne lecture et à très bientôt !</Explication>
+            <Welcome>Bienvenue sur le site, pensez à confirmer votre présence dans l'onglet formulaire !</Welcome>
+            <Explication>A très bientôt, nous comptons les jours...</Explication>
             {
                 remainingTime.seconds < 0 ? (
                     <span>Tu vas te marier !</span>
