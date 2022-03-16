@@ -100,7 +100,7 @@ const range = [1, 2, 3, 4]
 //redirect ou Link
 function Hotel() {
 
-    const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/hotels`)
+    const { data, error } = useData (`../../hotel-data.json`)
 
     if (error) {
         return <span>Oups il y a eu un problème</span>

@@ -1,23 +1,23 @@
 {
     "locationData":
     [
-        "photo_1.jpg",
-        "photo_2.jpg",
-        "photo_3.jpg",
-        "photo_4.jpg",
-        "photo_5.jpg",
-        "photo_6.jpg",
-        "photo_7.jpg",
-        "photo_8.jpeg",
-        "photo_9.jpeg",
-        "photo_10.jpeg",
-        "photo_11.jpeg",
-        "photo_12.jpeg",
-        "photo_13.jpeg",
-        "photo_14.jpeg",
-        "photo_15.jpeg",
-        "photo_16.jpeg",
-        "photo_17.jpeg",
-        "photo_18.jpeg"
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg",
+        "4.jpeg",
+        "5.jpeg",
+        "6.jpeg",
+        "7.jpeg",
+        "8.jpg",
+        "9.jpg",
+        "10.jpg",
+        "11.jpg",
+        "12.jpg",
+        "13.jpg",
+        "14.jpg",
+        "15.jpg",
+        "16.jpg",
+        "17.jpg",
+        "18.jpg"
     ]
 }
