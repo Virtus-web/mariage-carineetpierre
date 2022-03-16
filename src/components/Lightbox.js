@@ -26,7 +26,7 @@ function Lightbox({currentPhoto}) {
     const nextSlide = () => number === photosData.length ? setNumber(1) : setNumber(number + 1)
     const prevSlide = () => number === 1 ? setNumber(photosData.length) : setNumber(number - 1)
 
-    const { data, error } = useData (`../../photo-data.json`)
+    const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
     const photosData = data?.locationData
 

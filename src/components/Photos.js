@@ -66,7 +66,7 @@ function Gallery() {
 
     const [ currentPhoto, setCurrentPhoto ] = useState(0)
 
-    const { data, error } = useData (`../../photo-data.json`)
+    const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
     const photosData = data?.locationData
 

@@ -10,6 +10,7 @@ const Bloc = styled.div`
     width: 100%;
     height: 50vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 10vh;
@@ -61,6 +62,38 @@ const Item = styled.span`
     }
 `
 
+const Welcome = styled.p`
+    font-family: 'Amatic SC', 'Cormorant Garamond';
+    color: rgba(40, 44, 52, 0.8);
+    height: auto;
+    margin: 0 auto 0 auto;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    ${'' /* @media screen and (max-width: 920px) {
+        margin-top: 0;
+        flex-direction: column;
+    } */}
+`
+
+const Explication = styled.p`
+    font-family: 'Amatic SC', 'Cormorant Garamond';
+    color: rgba(40, 44, 52, 0.8);
+    line-height: 1em;
+    height: auto;
+    margin: 1em auto 2em auto;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+    ${'' /* @media screen and (max-width: 920px) {
+        margin-top: 0;
+        flex-direction: column;
+    } */}
+`
+
+
 const defaultRemainingTime = {
     seconds: '00',
     minutes: '00',
@@ -96,6 +129,8 @@ function CountDownTimer() {
 
     return (        
         <Bloc>
+            <Welcome>Bienvenue à notre mariage !</Welcome>
+            <Explication>En attendant le grand jour, nous avons créé ce site composé de diverses sections afin de te tenir au courant de l’avancée du mariage et partager quelques infos pratiques. Un détail important, dans la section Présence tu peux confirmer ou non ta venue. Bonne lecture et à très bientôt !</Explication>
             {
                 remainingTime.seconds < 0 ? (
                     <span>Tu vas te marier !</span>

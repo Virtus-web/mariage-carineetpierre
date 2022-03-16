@@ -37,6 +37,51 @@ const CoupleBox = styled.div`
     }
 `
 
+const TextOne = styled.p`
+    ${'' /* color: rgba(255, 255, 255, 0.7); */}
+    color: white;
+    line-height: 1.5em;
+    height: auto;
+    margin: 1em auto 1em auto;
+    font-size: 2em;
+    text-align: center;
+    width: 95%;
+    ${'' /* @media screen and (max-width: 920px) {
+        margin-top: 0;
+        flex-direction: column;
+    } */}
+`
+
+
+const TextTwo = styled.p`
+    color: white;
+    line-height: 1.3em;
+    height: auto;
+    margin: 2em auto 0 auto;
+    font-size: 1.5em;
+    text-align: center;
+    width: 50%;
+    ${'' /* @media screen and (max-width: 920px) {
+        margin-top: 0;
+        flex-direction: column;
+    } */}
+`
+
+const TextThree = styled.p`
+    ${'' /* color: rgba(255, 255, 255, 0.7); */}
+    color: white;
+    line-height: 1.3em;
+    height: auto;
+    margin: 1em auto 0 auto;
+    font-size: 2em;
+    text-align: center;
+    width: 95%;
+    ${'' /* @media screen and (max-width: 920px) {
+        margin-top: 0;
+        flex-direction: column;
+    } */}
+`
+
 
 function Home() {
     
@@ -46,16 +91,16 @@ function Home() {
             <LogoBox>
                 <Presentation />
                 {/* <h2 className="title" style={{color: 'rgba(40, 44, 52, 0.8)', display:'inline-block', lineHeight: '2em', marginTop: '2em'}}>The Happy Couple</h2> */}
-                <h2 className="title" style={{color: 'rgba(255, 255, 255, 0.7)', display:'inline-block', lineHeight: '2em', marginTop: '2em'}}>The Happy Couple</h2>
+                <h2 className="title" style={{color: 'rgba(255, 255, 255, 0.7)', display:'inline-block', lineHeight: '2em', marginTop: '0.5em', fontSize: '2em'}}>L'heureux Couple</h2>
+                <TextOne>C'est avec la plus grande joie et beaucoup d'émotion que Carine & Pierre, entourés de leurs parents Annick & Yves, Patricia & Pascal vous invitent à célébrer leur mariage</TextOne>
                 <CoupleBox>
                     <Couple who={Wife} name='La Mariée' />
                     <Kids who={Charlie} />
                     <Kids who={Edouard} />
                     <Couple who={Husband} name='Le Marié' />
                 </CoupleBox>
-                <p style={{color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.5em', height: 'auto', marginLeft: 'auto', marginRight: 'auto', fontSize: '1.5em', textAlign: 'center', width: '87%'}}>C'est avec la plus grande joie et beaucoup d'émotion que Carine & Pierre, entourés de leurs parents Annick & Yves, Patricia & Pascal vous invitent à célébrer leur mariage</p>
-                <p>Chalet Les Rhodos Col des Aravis Entre la Clusaz et Megève, 74220 La Clusaz</p>
-                <p>Nous serions très heureux de pouvoir partager ce moment unique avec vous au milieu des montagnes enneigées.</p>
+                <TextTwo>Chalet Les Rhodos Col des Aravis Entre la Clusaz et Megève, 74220 La Clusaz</TextTwo>
+                <TextThree>Nous serions très heureux de pouvoir partager ce moment unique avec vous au milieu des montagnes enneigées.</TextThree>
                 <CountDownTimer />
             </LogoBox>
             <Footer />
