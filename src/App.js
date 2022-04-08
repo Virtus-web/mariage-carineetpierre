@@ -14,7 +14,8 @@ import Error from './pages/Error'
 
 const BlocPage = styled.div`
     ${'' /* background-color : rgba(255, 255, 255, 0.4); */}
-    background-color : rgba(64, 88, 68, 0.5);
+    ${'' /* background-color : rgba(64, 88, 68, 0.5); */}
+    ${'' /* background-color : rgba(90, 120, 115, .5); */}
     margin-top: 5em;
 `
 

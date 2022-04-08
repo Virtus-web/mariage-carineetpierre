@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import Background from '../assets/images/Background.jpg'
+import Background from '../assets/images/Background1.jpg'
 
 
 const Bloc = styled.div`
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 70, 0, 0.5)), url(${Background});
+    ${'' /* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 70, 0, 0.5)), url(${Background}); */}
+    background-image: linear-gradient(var(--color-bg-light), var(--color-bg-light)), url(${Background});
     background-position: 25% 40%;
     background-size: 100%;
-    margin-top: 3em;
+    margin-top: 2em;
     width: 100%;
     height: auto;
     display: flex;

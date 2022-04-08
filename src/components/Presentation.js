@@ -4,6 +4,7 @@ import HappyCouple from '../assets/images/cover.jpg'
 
 const PhotoBox = styled.div`
     margin-top: 1em;
+    margin-bottom: 2em;
     width: 100%;
     height: 30em;
     position: relative;

@@ -17,8 +17,8 @@ const ImgBox = styled.div`
     background-color: rgba(40, 44, 52, 0.8);
     border-radius: 10em;
     padding: 0.5em;
-    width: 15em;
-    height: 15em;
+    width: 20em;
+    height: 20em;
     margin-bottom: 1em;
     @media screen and (max-width: 1400px) {
         width: 12em;

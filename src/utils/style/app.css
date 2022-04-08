@@ -5,7 +5,9 @@
     transition: 1s;
 }
 .hide-header {
-    background: transparent;
+    /* background: transparent; */
+    /* background: rgba(90, 120, 115, .7); */
+    background: rgba(255, 255, 255, .5);
     transition: 0.5s;
 }
 
@@ -370,6 +372,10 @@ form > button:hover {
         height: 0.7em;
         font-size: 1em;
     }
+}
+
+.text-link {
+    font-family: 'Amatic SC';
 }
 
 .text-link:hover {
