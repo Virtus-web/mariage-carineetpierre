@@ -2,7 +2,7 @@ import { ThemeContext } from '../utils/context'
 import { Fragment, useContext, useState } from 'react'
 import { useData } from '../utils/hooks/data'
 import styled from 'styled-components'
-import Lightbox from './Lightbox'
+import LightboxLocation from './LightboxLocation'
 
 
 const PhotoBox = styled.div`
@@ -62,7 +62,7 @@ const GalleryTitle = styled.div`
 
 function Location() {
 
-    const { activeModal } = useContext(ThemeContext)
+    const { activeModalLocation } = useContext(ThemeContext)
 
     const [ currentPhoto, setCurrentPhoto ] = useState(0)
 
@@ -85,8 +85,9 @@ function Location() {
                         .map((element, index) => {
                             return (
                                 <div key={index} onClick={() => {
-                                    setCurrentPhoto(index+1)
-                                    activeModal()
+                                    console.log(element.split('.')[0])
+                                    setCurrentPhoto(element.split('.')[0])
+                                    activeModalLocation()
                                 }}>
                                     <CardPhoto className="gallery-photo" src={`../../photos/photo_${element}`} alt="pics" />
                                 </div>
@@ -94,7 +95,7 @@ function Location() {
                         })) : (null)
                 }
             </PhotoBox>
-            <Lightbox currentPhoto={currentPhoto} />
+            <LightboxLocation currentPhoto={currentPhoto} />
         </Fragment>
     )
 }

@@ -13,18 +13,24 @@ const Photo = styled.img`
 
 //mediafactory
 
-function Lightbox({currentPhoto}) {
+function LightboxTheme({currentPhoto}) {
     
-    const { modal, activeModal } = useContext(ThemeContext)
+    const { modalTheme, activeModalTheme } = useContext(ThemeContext)
 
-    const [ number, setNumber ] = useState(0)
+    const [ numberTheme, setNumberTheme ] = useState(0)
 
     useEffect(() => {
-        setNumber(currentPhoto);
+        setNumberTheme(parseInt(currentPhoto));
     }, [currentPhoto])
 
-    const nextSlide = () => number === photosData.length ? setNumber(1) : setNumber(number + 1)
-    const prevSlide = () => number === 1 ? setNumber(photosData.length) : setNumber(number - 1)
+    const nextSlide = () => {
+        numberTheme === 7 ? setNumberTheme(1) : setNumberTheme(numberTheme + 1)
+        console.log(numberTheme)
+    }
+    const prevSlide = () => {
+        numberTheme === 1 ? setNumberTheme(7) : setNumberTheme(numberTheme - 1)
+        console.log(numberTheme)
+    }
 
     const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
@@ -68,10 +74,10 @@ function Lightbox({currentPhoto}) {
     //Attention modifier json et bdd et src pour lightbox et pjotos pour l'extension
 
     return (
-        <div className={`lightbox ${modal}`}>
+        <div className={`lightbox ${modalTheme}`}>
             <button className="lightbox__close" onClick={() => {
-                setNumber(0)
-                activeModal()
+                setNumberTheme(0)
+                activeModalTheme()
             }}>Close</button>
             <button className="lightbox__prev" onClick={() => prevSlide()}>Previous</button>
             <button className="lightbox__next" onClick={() => nextSlide()}>Next</button>
@@ -81,12 +87,12 @@ function Lightbox({currentPhoto}) {
                         photosData.map((element, index) => {
                     
                             return (
-                                <div key={index} className={`photo-box${number === (index + 1) ? " anim" : ""}`}>
+                                <div key={index} className={`photo-box${numberTheme === (index + 1) ? " anim" : ""}`}>
                                     {
-                                        number < 8 ? (
-                                            <Photo src={`../../photos/photo_${number}.jpeg`} alt="pics" />
+                                        numberTheme < 8 ? (
+                                            <Photo src={`../../photos/photo_${numberTheme}.jpeg`} alt="pics" />
                                         ) : (
-                                            <Photo src={`../../photos/photo_${number}.jpg`} alt="pics" />
+                                            <Photo src={`../../photos/photo_${numberTheme}.jpg`} alt="pics" />
                                         )
                                     }
                                 </div>
@@ -98,4 +104,4 @@ function Lightbox({currentPhoto}) {
     )
 }
 
-export default Lightbox
+export default LightboxTheme
