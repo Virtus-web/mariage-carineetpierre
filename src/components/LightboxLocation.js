@@ -13,18 +13,15 @@ const Photo = styled.img`
 
 //mediafactory
 
-function Lightbox({currentPhoto}) {
+function LightboxLocation({currentPhoto}) {
     
-    const { modal, activeModal } = useContext(ThemeContext)
+    const { modalLocation, activeModalLocation } = useContext(ThemeContext)
 
-    const [ number, setNumber ] = useState(0)
+    const [ numberLocation, setNumberLocation ] = useState(0)
 
     useEffect(() => {
-        setNumber(currentPhoto);
+        setNumberLocation(currentPhoto);
     }, [currentPhoto])
-
-    const nextSlide = () => number === photosData.length ? setNumber(1) : setNumber(number + 1)
-    const prevSlide = () => number === 1 ? setNumber(photosData.length) : setNumber(number - 1)
 
     const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
@@ -33,6 +30,9 @@ function Lightbox({currentPhoto}) {
     if (error) {
         return <span>Oups il y a eu un problème</span>
     }
+
+    const nextSlide = () => numberLocation >= (photosData.length) ? setNumberLocation(8) : setNumberLocation(numberLocation + 1)
+    const prevSlide = () => numberLocation <= 8 ? setNumberLocation(photosData.length) : setNumberLocation(numberLocation - 1)
 
     // const mediafactory = (media) => {
     //     let mediaHTML = "";
@@ -67,26 +67,28 @@ function Lightbox({currentPhoto}) {
 
     //Attention modifier json et bdd et src pour lightbox et pjotos pour l'extension
 
+    // Ca fonctionnait avec location & lightboxlocation avant de créer celle pour le theme
+    //Essayer d'enlever les condition > ou < 8 ci-dessous
     return (
-        <div className={`lightbox ${modal}`}>
+        <div className={`lightbox ${modalLocation}`}>
             <button className="lightbox__close" onClick={() => {
-                setNumber(0)
-                activeModal()
+                setNumberLocation(0)
+                activeModalLocation()
             }}>Close</button>
             <button className="lightbox__prev" onClick={() => prevSlide()}>Previous</button>
             <button className="lightbox__next" onClick={() => nextSlide()}>Next</button>
             <div className="lightbox__container">
                 {
                     photosData ? (
-                        photosData.map((element, index) => {
+                        photosData.map((index) => {
                     
                             return (
-                                <div key={index} className={`photo-box${number === (index + 1) ? " anim" : ""}`}>
+                                <div key={index} className={`photo-box${numberLocation === (index + 1) ? " anim" : ""}`}>
                                     {
-                                        number < 8 ? (
-                                            <Photo src={`../../photos/photo_${number}.jpeg`} alt="pics" />
+                                        numberLocation < 8 ? (
+                                            <Photo src={`../../photos/photo_${numberLocation}.jpeg`} alt="pics" />
                                         ) : (
-                                            <Photo src={`../../photos/photo_${number}.jpg`} alt="pics" />
+                                            <Photo src={`../../photos/photo_${numberLocation}.jpg`} alt="pics" />
                                         )
                                     }
                                 </div>
@@ -98,4 +100,4 @@ function Lightbox({currentPhoto}) {
     )
 }
 
-export default Lightbox
+export default LightboxLocation

@@ -21,9 +21,19 @@ const BlocPage = styled.div`
 
 function App() {
 
-    const [modal, setModal] = useState('')
-    const activeModal = () => {
-        setModal(modal === 'active' ? '' : 'active')
+    const [modalTheme, setModalTheme] = useState('')
+    const activeModalTheme = () => {
+        setModalTheme(modalTheme === 'active' ? '' : 'active')
+    }
+
+    const [modalLocation, setModalLocation] = useState('')
+    const activeModalLocation = () => {
+        setModalLocation(modalLocation === 'active' ? '' : 'active')
+    }
+
+    const [modalForm, setModalForm] = useState('')
+    const activeModalForm = () => {
+        setModalForm(modalForm === 'active' ? '' : 'active')
     }
 
     const [warning, setWarning] = useState('')
@@ -33,7 +43,7 @@ function App() {
 
     return (
         <BrowserRouter className="App">
-            <ThemeContext.Provider value={{ modal, activeModal, warning, activeWarning }}>
+            <ThemeContext.Provider value={{ modalTheme, activeModalTheme, modalLocation, activeModalLocation, modalForm, activeModalForm, warning, activeWarning }}>
                 <GlobalStyle />
                 <BlocPage>
                     <Header />

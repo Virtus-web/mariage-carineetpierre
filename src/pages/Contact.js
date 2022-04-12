@@ -4,6 +4,7 @@
 // import "../utils/style/app.css"
 import { useState, useContext } from "react"
 import { ThemeContext } from '../utils/context'
+import styled from 'styled-components'
 import Axios from 'axios'
 import TextForm from "../components/TextForm"
 import RadioForm from "../components/RadioForm"
@@ -11,69 +12,84 @@ import SelectForm from "../components/SelectForm"
 import ModalForm from "../components/ModalForm"
 
 
+const FormBox = styled.div`
+    background-image: linear-gradient(var(--color-bg-light), var(--color-bg-light));
+    padding: 1em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1380px) {
+        background-position: 30% 20%;
+        background-size: 200%;
+        background-repeat: repeat;
+    }
+`
+
+
 function Contact() {
 
-    const inputs = [
-        {
-        // num: 1,
-        // valuename: "guestName",
-        name: "username",
-        type: "text",
-        placeholder: "Nom",
-        errorMessage:
-            "20 lettres, pas plus !",
-        label: "Username",
-        pattern: "^[A-Za-z]{3,20}$",
-        // required: ""
-        },
-        {
-        // num: 2,
-        // valuename: "guestMail",
-        name: "email",
-        type: "email",
-        placeholder: "Email",
-        errorMessage: "Veuillez renseigner une adresse mail !",
-        label: "Email",
-        // pattern: "/^[a-z0-9.-_]+@[a-z0-9.-_]{2,}.[a-z]{2,4}$/",
-        // required: true
-        }
-    ]
+    // const inputs = [
+    //     {
+    //     // num: 1,
+    //     // valuename: "guestName",
+    //     name: "username",
+    //     type: "text",
+    //     placeholder: "Nom",
+    //     errorMessage: "30 lettres, pas plus !",
+    //     label: "Username",
+    //     pattern: "^[A-Za-z ]{3,30}$"
+    //     // required: ""
+    //     },
+    //     {
+    //     // num: 2,
+    //     // valuename: "guestMail",
+    //     name: "email",
+    //     type: "email",
+    //     placeholder: "Email",
+    //     errorMessage: "Veuillez renseigner une adresse mail !",
+    //     label: "Email"
+    //     // pattern: "/^[a-z0-9.-_]+@[a-z0-9.-_]{2,}.[a-z]{2,4}$/",
+    //     // required: true
+    //     }
+    // ]
 
-    const radios = [
-        {
-        // valuename: "guestAnswer",
-        name: "presence",
-        type: "radio",
-        id: "oui",
-        value: "oui",
-        errorMessage: "Réponds !",
-        label: "oui"
-        // required: true
-        },
-        {
-        // valuename: "guestAnswer",
-        name: "presence",
-        type: "radio",
-        id: "non",
-        value: "non",
-        errorMessage: "Réponds !",
-        label: "non"
-        // required: true
-        }
-    ]
+    // const radios = [
+    //     {
+    //     // valuename: "guestAnswer",
+    //     // name: "presence",
+    //     type: "radio",
+    //     id: "oui",
+    //     value: "oui",
+    //     errorMessage: "Réponds !",
+    //     label: "oui"
+    //     // required: true
+    //     },
+    //     {
+    //     // valuename: "guestAnswer",
+    //     // name: "presence",
+    //     type: "radio",
+    //     id: "non",
+    //     value: "non",
+    //     errorMessage: "Réponds !",
+    //     label: "non"
+    //     // required: true
+    //     }
+    // ]
 
-    const selects = [
-        {
-        // num: 5,
-        // valuename: "guestNumber",
-        // type:"number",
-        errorMessage: "Accompagné ou pas ?",
-        label: "Nombre de personnes"
-        // min: "1",
-        // max: "10",
-        // required: true
-        }
-    ]
+    // const selects = [
+    //     {
+    //     // num: 5,
+    //     // valuename: "guestNumber",
+    //     // type:"number",
+    //     errorMessage: "Accompagné ou pas ?",
+    //     label: "Nombre de personnes"
+    //     // min: "1",
+    //     // max: "10",
+    //     // required: true
+    //     }
+    // ]
 
 
     // const [values, setValues] = useState({
@@ -108,7 +124,7 @@ function Contact() {
         if (document.querySelector('#form').checkValidity()) {
 
             // setError(false)
-            activeModal()
+            // activeModalForm()
 
             Axios.post("https://mariage-carineetpierre.herokuapp.com/guestlist", {
                 guestName: guestName,
@@ -119,6 +135,7 @@ function Contact() {
             .then(response => {console.log(response)})//Ici le loader et l'erreur avec redirection
             .catch(error => {console.log(error)})
 
+            activeModalForm()
             console.log('Envoyé')
 
         } else if (document.querySelector('#form').checkValidity() && warning) {
@@ -135,7 +152,7 @@ function Contact() {
             .then(response => {console.log(response)})//Ici le loader et l'erreur avec redirection
             .catch(error => {console.log(error)})
             
-            activeModal()
+            activeModalForm()
             console.log('Envoyé')
 
         } else if (!document.querySelector('#form').checkValidity() && !warning) {
@@ -154,22 +171,35 @@ function Contact() {
         }       
     }
 
-    const { warning, activeWarning, activeModal } = useContext(ThemeContext)
+    const { warning, activeWarning, activeModalForm } = useContext(ThemeContext)
 
 
     return (
-        <div className="form-container">
+        <FormBox className="form-container">
             {/* <form onSubmit={addToAnswer} id="form" action="/contact" method="" name="form" onInvalid={() => setError(true)}> */}
             {/* <form onSubmit={addToAnswer} id="form" action="/contact" method="" name="form"> */}
             <form id="form" action="/contact" method="" name="form">
                 <h1>Formulaire de réponse</h1>
+                {/* //ICI */}
                 <TextForm
-                    {...inputs[0]}
-                     onChange={(e) => setGuestName(e.target.value)}
+                    type= "text"
+                    name= "username"
+                    placeholder= "Nom"
+                    errorMessage= "30 lettres, pas plus !"
+                    label= "Username"
+                    pattern= "^[A-Za-z ]{3,30}$"
+                    
+                    onChange={(e) => setGuestName(e.target.value)}
                     //  onInvalid={() => true ? console.log('non') : console.log('ok')}
                 />
                 <TextForm
-                    {...inputs[1]}
+                    type= "email"
+                    name= "email"
+                    placeholder= "Email"
+                    errorMessage= "Veuillez renseigner une adresse mail !"
+                    label= "Username"
+                    // pattern= "/^[a-z0-9.-_]+@[a-z0-9.-_]{2,}\.[a-z]{2,4}$/"
+
                     onChange={(e) => setGuestMail(e.target.value)}
                     // onInvalid={() => {
                     //     setError(true)
@@ -178,16 +208,26 @@ function Contact() {
                 <h2>Présence au mariage ?</h2>
                 <div className="radio-box">
                     <RadioForm
-                        {...radios[0]}
-                        htmlFor={radios[0].name}
+                        type= "radio"
+                        id= "oui"
+                        name="presence"
+                        value= "oui"
+                        errorMessage= "Réponds !"
+                        label= "oui"
+                        htmlFor="oui"
                         onChange={(e) => setGuestAnswer(e.target.value)}
                         // onInvalid={() => {
                         //     setError(true)
                         // }}
                     />
                     <RadioForm
-                        {...radios[1]}
-                        htmlFor={radios[1].name}
+                        type= "radio"
+                        id= "non"
+                        name="presence"
+                        value= "non"
+                        errorMessage= "Réponds !"
+                        label= "non"
+                        htmlFor="non"
                         onChange={(e) => setGuestAnswer(e.target.value)}
                         // onInvalid={() => {
                         //     setError(true)
@@ -197,7 +237,8 @@ function Contact() {
                 <h2>Nombre de personnes</h2>
                 <div className="select-box">
                     <SelectForm
-                        {...selects}
+                        errorMessage= "Accompagné ou pas ?"
+                        label= "Nombre de personnes"
                         type= "number"
                         min= "1"
                         max= "5"
@@ -215,7 +256,7 @@ function Contact() {
                 {/* <button>Répondre</button> */}
             </form>
             <ModalForm />
-        </div>
+        </FormBox>
     )
 }
 

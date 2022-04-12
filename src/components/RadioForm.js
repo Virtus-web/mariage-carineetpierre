@@ -14,7 +14,7 @@ const RadioForm = (props) => {
     
     const [focused, setFocused] = useState(false)
 
-    const { label, errorMessage, onChange, htmlFor, ...inputProps } = props
+    const { type, id, name, value, label, errorMessage, onChange, htmlFor } = props
 
     const handleFocus = () => {
         setFocused(true)
@@ -23,8 +23,11 @@ const RadioForm = (props) => {
     return (
         <div className="input-radio">
             <RadioLabel htmlFor={htmlFor}>{label}</RadioLabel>
-            <input className="input-radio-btn"
-                {...inputProps}
+            <input className="input-radio-btn" 
+                type={type}
+                id={id}
+                name={name}
+                value={value}
                 onChange={onChange}
                 onBlur={handleFocus}
                 focused={focused.toString()}

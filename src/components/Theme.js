@@ -2,7 +2,7 @@ import { ThemeContext } from '../utils/context'
 import { Fragment, useContext, useState } from 'react'
 import { useData } from '../utils/hooks/data'
 import styled from 'styled-components'
-import Lightbox from './Lightbox'
+import LightboxTheme from './LightboxTheme'
 
 
 const PhotoBox = styled.div`
@@ -53,7 +53,7 @@ const GalleryTitle = styled.div`
     text-align: center;
     width: 100%;
     color: white;
-    font-size: 2.5em;
+    font-size: 3em;
     @media screen and (max-width: 780px) {
         width: 80%;
         font-size: 1.5em;
@@ -62,7 +62,7 @@ const GalleryTitle = styled.div`
 
 function Theme() {
 
-    const { activeModal } = useContext(ThemeContext)
+    const { activeModalTheme } = useContext(ThemeContext)
 
     const [ currentPhoto, setCurrentPhoto ] = useState(0)
 
@@ -81,12 +81,12 @@ function Theme() {
                 {
                     photosData ? (
                         photosData
-                        .filter(element => element.split('.')[0] <= 7)
+                        .filter(element => element.split('.')[0] < 8)
                         .map((element, index) => {
                             return (
                                 <div key={index} onClick={() => {
-                                    setCurrentPhoto(index+1)
-                                    activeModal()
+                                    setCurrentPhoto(parseInt(element.split('.')[0]))
+                                    activeModalTheme()
                                 }}>
                                     <CardPhoto className="gallery-photo" src={`../../photos/photo_${element}`} alt="pics" />
                                 </div>
@@ -94,7 +94,7 @@ function Theme() {
                         })) : (null)
                 }
             </PhotoBox>
-            <Lightbox currentPhoto={currentPhoto} />
+            <LightboxTheme currentPhoto={currentPhoto} />
         </Fragment>
     )
 }

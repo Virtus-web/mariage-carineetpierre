@@ -40,6 +40,21 @@ const PhotoInfo = styled.div`
     align-items: center;
 `
 
+
+const TextNames = styled.h2`
+    ${'' /* color: rgba(255, 255, 255, 0.7); */}
+    color: white;
+    height: 3em;
+    margin: 0;
+    font-size: 5em;
+    @media screen and (max-width: 640px) {
+        font-size: 3.5em;
+    }
+    @media screen and (max-width: 340px) {
+        font-size: 2em;
+    }
+`
+
 function Presentation() {
     
     return (
@@ -47,7 +62,7 @@ function Presentation() {
             <Styledpics src={HappyCouple} alt='couple'/>
             <PhotoModal>
                 <PhotoInfo className="names">
-                    <h2 style={{color: 'rgba(40, 44, 52, 0.8)', height: '3em', margin: 0, fontSize: '2.5em'}}>Carine & Pierre</h2>
+                    <TextNames>Carine & Pierre</TextNames>
                     <div style={{display: 'flex', flexDirection: 'column'}}>
                         <p style={{borderBottom: '0.001em solid white', margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '1.5em', fontFamily: 'Amatic SC'}}>Are getting married</p>
                         <p style={{margin: 0, color: 'rgba(250, 250, 250, 1)', fontSize: '1.5em', fontFamily: 'Amatic SC'}}>January 22th 2023</p>
