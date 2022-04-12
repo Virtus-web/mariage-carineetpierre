@@ -35,10 +35,12 @@ const InfoBoxBus = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: 1380px) {
-        background-position: 30% 20%;
-        background-size: 200%;
-        background-repeat: repeat;
+    @media screen and (max-width: 340px) {
+        ${'' /* background: linear-gradient(var(--color-bg-light)), rgba(255, 255, 255, .7), url(${Bus}); */}
+        background: linear-gradient(rgba(255, 255, 255, .3), var(--color-bg-light)), url(${Bus});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70%;
     }
 `
 
@@ -47,7 +49,8 @@ const HotelTitle = styled.h2`
     color: white;
     font-size: 3em;
     @media screen and (max-width: 340px) {
-        font-size: 1em;
+        font-size: 1.5em;
+        ${'' /* color: rgba(40, 44, 52, 0.8); */}
     }
 `
 
@@ -63,6 +66,9 @@ const PlanBox = styled.img`
     width: 100%;
     height: auto;
     dobject-fit: contain;
+    @media screen and (max-width: 340px) {
+        width: 80%;
+    }
 `
 
 const TextContainer = styled.p`
@@ -71,6 +77,9 @@ const TextContainer = styled.p`
     line-height: 2;
     font-size: 2.5em;
     margin: 0;
+    @media screen and (max-width: 340px) {
+        font-size: 1.5em;
+    }
 `
 
 const TextContainerTwo = styled.p`
@@ -80,6 +89,9 @@ const TextContainerTwo = styled.p`
     line-height: 1.5;
     font-size: 1.7em;
     text-align: center;
+    @media screen and (max-width: 340px) {
+        font-size: 1em;
+    }
 `
 
 

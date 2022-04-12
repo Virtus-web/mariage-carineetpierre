@@ -53,7 +53,7 @@ const GalleryTitle = styled.div`
     text-align: center;
     width: 100%;
     color: white;
-    font-size: 2.5em;
+    font-size: 3em;
     @media screen and (max-width: 780px) {
         width: 80%;
         font-size: 1.5em;
