@@ -45,7 +45,7 @@ const InfoBoxBus = styled.div`
 const HotelTitle = styled.h2`
     margin: 1em 0 1em 0;
     color: white;
-    font-size: 2em;
+    font-size: 3em;
     @media screen and (max-width: 340px) {
         font-size: 1em;
     }
