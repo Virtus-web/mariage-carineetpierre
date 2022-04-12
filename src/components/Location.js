@@ -85,8 +85,7 @@ function Location() {
                         .map((element, index) => {
                             return (
                                 <div key={index} onClick={() => {
-                                    console.log(element.split('.')[0])
-                                    setCurrentPhoto(element.split('.')[0])
+                                    setCurrentPhoto(parseInt(element.split('.')[0]))
                                     activeModalLocation()
                                 }}>
                                     <CardPhoto className="gallery-photo" src={`../../photos/photo_${element}`} alt="pics" />

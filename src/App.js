@@ -31,6 +31,11 @@ function App() {
         setModalLocation(modalLocation === 'active' ? '' : 'active')
     }
 
+    const [modalForm, setModalForm] = useState('')
+    const activeModalForm = () => {
+        setModalForm(modalForm === 'active' ? '' : 'active')
+    }
+
     const [warning, setWarning] = useState('')
     const activeWarning = () => {
         setWarning(warning === 'active' ? '' : 'active')
@@ -38,7 +43,7 @@ function App() {
 
     return (
         <BrowserRouter className="App">
-            <ThemeContext.Provider value={{ modalTheme, activeModalTheme, modalLocation, activeModalLocation, warning, activeWarning }}>
+            <ThemeContext.Provider value={{ modalTheme, activeModalTheme, modalLocation, activeModalLocation, modalForm, activeModalForm, warning, activeWarning }}>
                 <GlobalStyle />
                 <BlocPage>
                     <Header />

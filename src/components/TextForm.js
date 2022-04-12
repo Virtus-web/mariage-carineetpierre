@@ -4,7 +4,7 @@ import { useState } from "react"
 const TextForm = (props) => {
     const [focused, setFocused] = useState(false)
     // const { label, errorMessage, onChange, id, onInvalid, ...inputProps } = props
-    const { errorMessage, onChange, ...inputProps } = props
+    const { type, name, placeholder, errorMessage, label, onChange, ...inputProps } = props
 
     const handleFocus = () => {
         setFocused(true)
@@ -15,6 +15,10 @@ const TextForm = (props) => {
         <div className="input-text">
             <input
                 {...inputProps}
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                label={label}
                 onChange={onChange}
                 // onInvalid={onInvalid}
                 onBlur={handleFocus}

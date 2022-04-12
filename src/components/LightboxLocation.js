@@ -20,17 +20,8 @@ function LightboxLocation({currentPhoto}) {
     const [ numberLocation, setNumberLocation ] = useState(0)
 
     useEffect(() => {
-        setNumberLocation(parseInt(currentPhoto));
+        setNumberLocation(currentPhoto);
     }, [currentPhoto])
-
-    const nextSlide = () => {
-        console.log(numberLocation)
-        numberLocation === (photosData.length + 1) ? setNumberLocation(8) : setNumberLocation(numberLocation + 1)
-    }
-    const prevSlide = () => {
-        console.log(numberLocation)
-        numberLocation === 8 ? setNumberLocation(photosData.length + 1) : setNumberLocation(numberLocation - 1)
-    }
 
     const { data, error } = useData (`https://mariage-carineetpierre.herokuapp.com/photos`)
 
@@ -39,6 +30,9 @@ function LightboxLocation({currentPhoto}) {
     if (error) {
         return <span>Oups il y a eu un problème</span>
     }
+
+    const nextSlide = () => numberLocation >= (photosData.length) ? setNumberLocation(8) : setNumberLocation(numberLocation + 1)
+    const prevSlide = () => numberLocation <= 8 ? setNumberLocation(photosData.length) : setNumberLocation(numberLocation - 1)
 
     // const mediafactory = (media) => {
     //     let mediaHTML = "";
@@ -86,7 +80,7 @@ function LightboxLocation({currentPhoto}) {
             <div className="lightbox__container">
                 {
                     photosData ? (
-                        photosData.map((element, index) => {
+                        photosData.map((index) => {
                     
                             return (
                                 <div key={index} className={`photo-box${numberLocation === (index + 1) ? " anim" : ""}`}>
