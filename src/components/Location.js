@@ -9,10 +9,10 @@ const PhotoBox = styled.div`
     margin: 1em auto 0 auto;
     padding: 1em 0 0 2em;
     ${'' /* width: auto; */}
-    width: 25em;
+    width: auto;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 780px) {
@@ -81,7 +81,7 @@ function Location() {
                 {
                     photosData ? (
                         photosData
-                        .filter(element => element.split('.')[0] >= 8)
+                        .filter(element => element.split('.')[0] >= 9)
                         .map((element, index) => {
                             return (
                                 <div key={index} onClick={() => {

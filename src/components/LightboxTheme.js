@@ -31,8 +31,8 @@ function LightboxTheme({currentPhoto}) {
         return <span>Oups il y a eu un problème</span>
     }
 
-    const nextSlide = () => numberTheme >= 7  ? setNumberTheme(1) : setNumberTheme((numberTheme + 1))
-    const prevSlide = () => numberTheme <= 1 ? setNumberTheme(7) : setNumberTheme(numberTheme - 1)
+    const nextSlide = () => numberTheme >= 8  ? setNumberTheme(1) : setNumberTheme((numberTheme + 1))
+    const prevSlide = () => numberTheme <= 1 ? setNumberTheme(8) : setNumberTheme(numberTheme - 1)
 
     // const mediafactory = (media) => {
     //     let mediaHTML = "";
@@ -73,17 +73,8 @@ function LightboxTheme({currentPhoto}) {
                 setNumberTheme(currentPhoto)
                 activeModalTheme()
             }}>Close</button>
-            <button className="lightbox__prev" onClick={() => {
-                console.log(numberTheme)
-                prevSlide()
-            }
-            }>Previous</button>
-            
-            <button className="lightbox__next" onClick={() => {
-                console.log(numberTheme)
-                nextSlide()
-            }
-            }>Next</button>
+            <button className="lightbox__prev" onClick={() => prevSlide()}>Previous</button>     
+            <button className="lightbox__next" onClick={() => nextSlide()}>Next</button>
             <div className="lightbox__container">
                 {
                     photosData ? (

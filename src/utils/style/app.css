@@ -1,13 +1,13 @@
 .show-header {
     /* background: white; */
     /* background: rgba(64, 88, 68, 1); */
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 1);
     transition: 1s;
 }
 .hide-header {
     /* background: transparent; */
     /* background: rgba(90, 120, 115, .7); */
-    background: rgba(255, 255, 255, .5);
+    background: var(--color-bg-light);
     transition: 0.5s;
 }
 

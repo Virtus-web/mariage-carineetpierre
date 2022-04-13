@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import styled from 'styled-components'
 import Presentation from '../components/Presentation'
-import Couple from '../components/Couple'
+import Enfants from '../components/Enfants'
 import CountDownTimer from '../components/CountDownTimer'
 import Kids from '../assets/images/kids.jpg'
 import Logo from '../assets/images/FairePart.jpg'
@@ -14,6 +14,7 @@ const LogoBox = styled.div`
     background-position: 55% 50%;
     background-size: 70%;
     background-repeat: repeat;
+    padding-bottom: 1em;
     @media screen and (max-width: 820px) {
         margin-top: 0;
         flex-direction: column;
@@ -85,10 +86,10 @@ function Home() {
             <Presentation />
             <LogoBox>
                 {/* <h2 className="title" style={{color: 'rgba(40, 44, 52, 0.8)', display:'inline-block', lineHeight: '2em', marginTop: '2em'}}>The Happy Couple</h2> */}
-                <h2 className="title" style={{color: 'rgba(255, 255, 255, 0.7)', display:'inline-block', lineHeight: '2em', marginTop: '0.5em', fontSize: '2em'}}>Chers Amis</h2>
+                <h2 className="title" style={{color: 'rgba(255, 255, 255, 0.7)', display:'inline-block', lineHeight: '2em', marginTop: '0.5em', fontSize: '2em'}}>Chère famille, chers amis</h2>
                 <TextOne>C'est avec la plus grande joie et beaucoup d'émotion que Carine & Pierre, entourés de leurs parents Annick & Yves, Patricia & Pascal, ainsi que de leurs enfants Charlie et Edouard, vous invitent à célébrer leur mariage</TextOne>
                 <CoupleBox>
-                    <Couple who={Kids} name='La Mariée' />
+                    <Enfants who={Kids} />
                 </CoupleBox>
                 <TextTwo>Chalet Les Rhodos Col des Aravis Entre la Clusaz et Megève, 74220 La Clusaz</TextTwo>
                 <TextThree>Nous serions très heureux de pouvoir partager ce moment unique avec vous au milieu des montagnes enneigées.</TextThree>

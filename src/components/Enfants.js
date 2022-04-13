@@ -17,10 +17,15 @@ const ImgBox = styled.div`
     border: 1px solid rgba(40, 44, 52, 0.8);
     background-color: rgba(40, 44, 52, 0.8);
     border-radius: 10em;
-    padding: 0.1rem;
-    width: 3em;
-    height: 3em;
+    padding: 0.5em;
+    width: 15em;
+    height: 15em;
     margin-bottom: 1em;
+    @media screen and (max-width: 540px) {
+        padding: 0.1em;
+        width: 7em;
+        height: 7em;
+    }
 `
 
 const ProfilePic = styled.img`
@@ -30,27 +35,15 @@ const ProfilePic = styled.img`
     height: 100%;
 `
 
-const ProfileDetails = styled.h2`
-    font-family: 'Cormorant Garamond';
-    color: rgba(255, 255, 255, .7);
-    line-height: 1.5em;
-    font-size: 1em;
-    margin: 0;
-    @media screen and (max-width: 340px) {
-        font-size: .9em;
-    }
-`
 
-function Couple({who, tel, mail}) {
+function Enfants({who}) {
     return (
         <Profile>
             <ImgBox>
-                <ProfilePic src={who} alt='couple' />
+                <ProfilePic src={who} alt='enfants' />
             </ImgBox>
-            <ProfileDetails>{tel}</ProfileDetails>
-            <ProfileDetails>{mail}</ProfileDetails>
         </Profile>
     )
 }
 
-export default Couple
+export default Enfants
