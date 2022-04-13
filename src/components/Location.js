@@ -81,7 +81,7 @@ function Location() {
                 {
                     photosData ? (
                         photosData
-                        .filter(element => element.split('.')[0] >= 8)
+                        .filter(element => element.split('.')[0] >= 9)
                         .map((element, index) => {
                             return (
                                 <div key={index} onClick={() => {

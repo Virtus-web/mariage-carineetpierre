@@ -85,7 +85,7 @@ function Home() {
             <Presentation />
             <LogoBox>
                 {/* <h2 className="title" style={{color: 'rgba(40, 44, 52, 0.8)', display:'inline-block', lineHeight: '2em', marginTop: '2em'}}>The Happy Couple</h2> */}
-                <h2 className="title" style={{color: 'rgba(255, 255, 255, 0.7)', display:'inline-block', lineHeight: '2em', marginTop: '0.5em', fontSize: '2em'}}>Chers Amis</h2>
+                <h2 className="title" style={{color: 'rgba(255, 255, 255, 0.7)', display:'inline-block', lineHeight: '2em', marginTop: '0.5em', fontSize: '2em'}}>Chère famille, chers amis</h2>
                 <TextOne>C'est avec la plus grande joie et beaucoup d'émotion que Carine & Pierre, entourés de leurs parents Annick & Yves, Patricia & Pascal, ainsi que de leurs enfants Charlie et Edouard, vous invitent à célébrer leur mariage</TextOne>
                 <CoupleBox>
                     <Couple who={Kids} name='La Mariée' />

@@ -6,44 +6,21 @@ const Profile = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 100%;
+    margin-top: 1em;
     @media screen and (max-width: 540px) {
         margin-top: 3em;
     }
 `
 
 const ImgBox = styled.div`
-    border: 0.01em solid rgba(40, 44, 52, 0.8);
+    border: 1px solid rgba(40, 44, 52, 0.8);
     background-color: rgba(40, 44, 52, 0.8);
     border-radius: 10em;
-    padding: 0.5em;
-    width: 20em;
-    height: 20em;
+    padding: 0.1rem;
+    width: 3em;
+    height: 3em;
     margin-bottom: 1em;
-    @media screen and (max-width: 1400px) {
-        width: 12em;
-        height: 12em;
-    }
-    @media screen and (max-width: 1220px) {
-        width: 10em;
-        height: 10em;
-    }
-    @media screen and (max-width: 1020px) {
-        width: 8em;
-        height: 8em;
-    }
-    @media screen and (max-width: 920px) {
-        width: 15em;
-        height: 15em;
-    }
-    @media screen and (max-width: 540px) {
-        width: 10em;
-        height: 10em;
-    }
-    @media screen and (max-width: 340px) {
-        width: 7em;
-        height: 7em;
-    }
 `
 
 const ProfilePic = styled.img`
@@ -53,15 +30,25 @@ const ProfilePic = styled.img`
     height: 100%;
 `
 
-function Couple({who}) {
+const ProfileDetails = styled.h2`
+    font-family: 'Cormorant Garamond';
+    color: rgba(255, 255, 255, .7);
+    line-height: 1.5em;
+    font-size: 1em;
+    margin: 0;
+    @media screen and (max-width: 340px) {
+        font-size: .9em;
+    }
+`
+
+function Couple({who, tel, mail}) {
     return (
         <Profile>
             <ImgBox>
-                <ProfilePic src={who} alt='wife' />
+                <ProfilePic src={who} alt='couple' />
             </ImgBox>
-            {/* <h2 style={{color: 'rgba(40, 44, 52, 0.8)', lineHeight: '2em', height: 'auto', margin: 0, fontSize: '2em'}}>{name}</h2> */}
-            {/* <h2 style={{color: 'rgba(255, 255, 255, 0.7)', lineHeight: '2em', height: 'auto', margin: 0, fontSize: '2em'}}>{name}</h2> */}
-            {/* <p style={{color: 'rgba(255, 255, 255, 0.7)', lineHeight: '1.5em', height: 'auto', margin: 0, fontFamily: 'Amatic SC', textAlign: 'justify', width: '10em'}}>Lorem ipsum dolor sit amet. Sit sequi galisum sit voluptatem culpa et omnis dolor aut quos deleniti ut harum aliquam sit itaque architecto est nihil molestias.</p> */}
+            <ProfileDetails>{tel}</ProfileDetails>
+            <ProfileDetails>{mail}</ProfileDetails>
         </Profile>
     )
 }

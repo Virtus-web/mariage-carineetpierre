@@ -31,8 +31,8 @@ function LightboxLocation({currentPhoto}) {
         return <span>Oups il y a eu un problème</span>
     }
 
-    const nextSlide = () => numberLocation >= (photosData.length) ? setNumberLocation(8) : setNumberLocation(numberLocation + 1)
-    const prevSlide = () => numberLocation <= 8 ? setNumberLocation(photosData.length) : setNumberLocation(numberLocation - 1)
+    const nextSlide = () => numberLocation >= (photosData.length) ? setNumberLocation(9) : setNumberLocation(numberLocation + 1)
+    const prevSlide = () => numberLocation <= 9 ? setNumberLocation(photosData.length) : setNumberLocation(numberLocation - 1)
 
     // const mediafactory = (media) => {
     //     let mediaHTML = "";
