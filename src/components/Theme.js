@@ -9,10 +9,10 @@ const PhotoBox = styled.div`
     margin: 1em auto 0 auto;
     padding: 1em 0 0 2em;
     ${'' /* width: auto; */}
-    width: 25em;
+    width: auto;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 780px) {
