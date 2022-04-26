@@ -7,12 +7,12 @@ import LightboxTheme from './LightboxTheme'
 
 const PhotoBox = styled.div`
     margin: 1em auto 0 auto;
-    padding: 1em 0 0 2em;
+    padding: 1em 0 0 3em;
     ${'' /* width: auto; */}
-    width: auto;
+    width: 23em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 780px) {
@@ -81,7 +81,7 @@ function Theme() {
                 {
                     photosData ? (
                         photosData
-                        .filter(element => element.split('.')[0] < 9)
+                        .filter(element => element.split('.')[0] < 11)
                         .map((element, index) => {
                             return (
                                 <div key={index} onClick={() => {

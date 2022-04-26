@@ -31,8 +31,8 @@ function LightboxTheme({currentPhoto}) {
         return <span>Oups il y a eu un problème</span>
     }
 
-    const nextSlide = () => numberTheme >= 8  ? setNumberTheme(1) : setNumberTheme((numberTheme + 1))
-    const prevSlide = () => numberTheme <= 1 ? setNumberTheme(8) : setNumberTheme(numberTheme - 1)
+    const nextSlide = () => numberTheme >= 10  ? setNumberTheme(1) : setNumberTheme((numberTheme + 1))
+    const prevSlide = () => numberTheme <= 1 ? setNumberTheme(10) : setNumberTheme(numberTheme - 1)
 
     // const mediafactory = (media) => {
     //     let mediaHTML = "";

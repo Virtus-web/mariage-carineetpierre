@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import styled from 'styled-components'
 import Plan from '../assets/images/planHotels.png'
 import Bus from '../assets/images/BusBackground.jpg'
-import Mode from '../assets/images/nakedBackground.jpg'
+import Mode from '../assets/images/skieur.jpg'
 import Choice from '../assets/images/Choice.jpg'
 import Couple from '../components/Couple'
 import Elle from '../assets/images/Elle.jpg'
@@ -52,7 +52,7 @@ const InfoBoxBus = styled.div`
 const InfoBoxMode = styled.div`
     background: linear-gradient(rgba(255, 255, 255, .7), var(--color-bg-light)), url(${Mode});
     ${'' /* background: linear-gradient(var(--color-bg-light), rgba(255, 255, 255, .5)), url(${Bus}); */}
-    background-position: 25% 95%;
+    background-position: 25% 20%;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 1em;
@@ -192,7 +192,7 @@ function Event() {
                 <HotelTitle>Une question ?</HotelTitle>
                 <TextContainer>
                     Pas sûre du choix de ta robe? Cravate ou noeud pape?<br/>
-                    Les enfants sont-ils les bienvenus? Dois-je apporter mon propre lubrifiant ?<br/>
+                    Les enfants sont-ils les bienvenus?<br/>
                 </TextContainer>
                 <TextContainerTwo>
                     Si tu as la moindre question ou commentaire, n'hésite pas à nous contacter<br/>
